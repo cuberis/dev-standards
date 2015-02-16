@@ -1,3 +1,12 @@
+<% var pages = public.pages._data;
+  var page = null;
+  for(var i = 0; i < pages.length; i++){
+    if(pages[i].slug == current.source){
+      page = pages[i];
+    }
+  }
+  console.log(page);
+%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,11 +15,43 @@
     <title>Cuberis Standards</title>
     <link rel="stylesheet" href="/assets/css/app.css">
   </head>
-  <body class="page=<%- current.path[0] %>">
+  <body class="page-<%- current.path[0] %>">
+    <header class="main-header">
 
+    </header>
+    <div class="container">
+      <div class="row">
+        <aside class="col-sm-4">
+          <h3>Table of Contents</h3>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+          <% var pages = public.pages._data;
 
-    <%- yield %>
+            for(var k = 0; k < pages.length; k++){ %>
+            <li>
+              <a href="/pages/<%= pages[k].slug %>"><%= pages[k].title %></a>
+            </li>
+          <% } %>
 
+        </aside>
+        <main class="col-sm-8">
 
+          <% if(page && page.subnav){ %>
+            <%- partial('_partials/subnav', {subnav: page.subnav}) %>
+          <% } %>
+
+          <% if(page && page.title){ %>
+          <h1><%= page.title %></h1>
+          <% } %>
+          <%- yield %>
+
+        </main>
+      </div>
+    </div>
+
+    <footer>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Deployment",
+    "slug": "deployment",
+    "subnav": [
+      {
+        "title": "Deployment Setup",
+        "id": "setup"
+      }
+    ]
+  },
+  {
+    "title": "CSS",
+    "slug": "css",
+    "subnav": [
+      {
+        "title": "Specificity",
+        "id": "specificity"
+      }
+    ]
+  },
+  {
+    "title": "HTML",
+    "slug": "html",
+    "subnav": [
+      {
+        "title": "Markup",
+        "id": "html"
+      }
+    ]
+  },
+  {
+    "title": "GIT",
+    "slug": "git",
+    "subnav": [
+      {
+        "title": "Issues",
+        "id": "issues"
+      }
+    ]
+  },
+  {
+    "title": "Javascript",
+    "slug": "js",
+    "subnav": [
+      {
+        "title": "JavaScript",
+        "id": "js"
+      }
+    ]
+  },
+  {
+    "title": "Tooling",
+    "slug": "tooling",
+    "subnav": [
+      {
+        "title": "Gulp",
+        "id": "gulp"
+      }
+    ]
+  }
+]
