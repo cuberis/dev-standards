@@ -28,5 +28,10 @@
     "title": "Drupal",
     "slug": "drupal",
     "subnav": []
+  },
+  {
+    "title": "Project Management",
+    "slug": "management",
+    "subnav": []
   }
 ]
