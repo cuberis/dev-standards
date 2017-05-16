@@ -54,6 +54,12 @@
               </li>
             
           
+            
+              <li>
+                <a href="/standards/pages/contractors">Contractors</a>
+              </li>
+            
+          
             </ul>
           </nav>
         </aside>
@@ -199,16 +205,16 @@ Additionally, properties should ideally be ordered as follows (some properties o
 </code></pre><p>Examples of <strong>correctly</strong> combined compound selectors:</p>
 <pre><code>p.footnote.teal {...}
 .person:nth-child(odd)::after {...}
-</code></pre><p>In Less Syntax</p>
-<pre><code>p{
-    &amp;.footnote{
+</code></pre><p>In Less/Sass Syntax</p>
+<pre><code>p {
+    &amp;.footnote {
         &amp;.teal{
             ...
         }
     }
 }
-.person{
-    &amp;:nth-child(odd){
+.person {
+    &amp;:nth-child(odd) {
         &amp;::after {
             ...
         }
@@ -252,22 +258,21 @@ Additionally, properties should ideally be ordered as follows (some properties o
     [...]
 
 &lt;/section&gt;
-</code></pre><p>###app.less and what it means for <em>you</em></p>
-<p>Your app.less file should not contain any explicit attribute definitions. Rather, it should serve as a home for imported component files (e.g. buttons, lists, forms, etc) and merely assigned pre-designed library styles to explicitly-named application usages.</p>
-<p>Your LESS directory should be broken into three distinct parts: globals, components, and app.less itself. Globals should contain code written in the most abstract, reusable way possible and be written with language that denotes their visual appearance. Think of globals as your block level elements--buttons, forms, type, etc. Globals should be the only place where explicit CSS is written.</p>
+</code></pre><h3>Main.scss</h3><p>Your main.scss file should not contain any explicit attribute definitions. Rather, it should serve as a home for imported component files (e.g. buttons, lists, forms, etc) and merely assigned pre-designed library styles to explicitly-named application usages.</p>
+<p>Your Assets directory should contain all .scss files for importing (denoted with an underscore and typically broken into subfolders) and main.scss itself. Globals should contain code written in the most abstract, reusable way possible and be written with language that denotes their visual appearance. Think of globals as your block level elements--buttons, forms, type, etc. Globals should be the only place where explicit CSS is written.</p>
 <p>Components should integrate globals as mixins, and be written with language that denotes their &quot;purpose&quot; on the page. Think of components as &quot;sections&quot; or &quot;parts&quot; of a website.</p>
-<p>App.less contains nothing but import statements that compile your components and globals.</p>
-<p>Here&#39;s an example of what a _globals file named _buttons.less might look like. Note that modifiers are as descriptive as possible. (Also note the parantheses with .btn, which prevents it from being output to the compiled CSS file. )</p>
+<p>Main.scss contains nothing but import statements that compile your components and globals.</p>
+<p>Here&#39;s an example of what a _globals file named _buttons.scss might look like. Note that modifiers are as descriptive as possible. (Also note the parantheses with .btn, which prevents it from being output to the compiled CSS file. )</p>
 <pre><code>.btn() {
     border-radius: 4px;
     padding: 1em 2em;
-    background: @grey;
+    background: $grey;
 
     &amp;.green {
-        background: @green;
+        background: $green;
     }
     &amp;.red {
-        background: @red;
+        background: $red;
     }
     &amp;.square {
         border-radius: 0;
@@ -276,20 +281,20 @@ Additionally, properties should ideally be ordered as follows (some properties o
         padding: 1.5em 3em;
     }
 }
-</code></pre><p>This would then be used as a mixin within our _components files. Let&#39;s say we have a button associated with a person and a button associated with a product. The person button is green and square, the product button is red and has extra padding. This is our _person.less file:</p>
+</code></pre><p>This would then be used as a mixin within our _components files. Let&#39;s say we have a button associated with a person and a button associated with a product. The person button is green and square, the product button is red and has extra padding. This is our _person.scss file:</p>
 <pre><code>.person .btn {
     .btn.green.square();
 }
-</code></pre><p>and this is our \product.less file:</p>
+</code></pre><p>and this is our _product.scss file:</p>
 <pre><code>.product .btn {
     .btn.red.extra-padding();
 }
-</code></pre><p>Our app.less file then looks something like this:</p>
+</code></pre><p>Our main.scss file then looks something like this:</p>
 <pre><code>@import(&quot;dependencies/...&quot;);
-@import(&quot;globals/buttons.less&quot;);
-@import(&quot;components/person.less&quot;);
-@import(&quot;components/product.less&quot;);
-@import(&quot;components/home.less&quot;);
+@import(&quot;globals/\_buttons.scss&quot;);
+@import(&quot;components/\_person.scss&quot;);
+@import(&quot;components/\_product.scss&quot;);
+@import(&quot;components/\_home.scss&quot;);
 </code></pre><p>This system allows for an element&#39;s display characteristics to maintain a separation between <em>what</em> it is and <em>how</em> it looks on a page. This in turn allows for maximum reusability of code because form and function are distinct.</p>
 <!--
 ##Nesting
