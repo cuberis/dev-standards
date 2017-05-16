@@ -54,12 +54,6 @@
               </li>
             
           
-            
-              <li>
-                <a href="/standards/pages/drupal">Drupal</a>
-              </li>
-            
-          
             </ul>
           </nav>
         </aside>
@@ -258,7 +252,8 @@ Additionally, properties should ideally be ordered as follows (some properties o
     [...]
 
 &lt;/section&gt;
-</code></pre><h3>app.less and what it means for <em>you</em></h3><p>Your app.less file should not contain any explicit attribute definitions. Rather, it should serve as a home for imported component files (e.g. buttons, lists, forms, etc) and merely assigned pre-designed library styles to explicitly-named application usages.</p>
+</code></pre><p>###app.less and what it means for <em>you</em></p>
+<p>Your app.less file should not contain any explicit attribute definitions. Rather, it should serve as a home for imported component files (e.g. buttons, lists, forms, etc) and merely assigned pre-designed library styles to explicitly-named application usages.</p>
 <p>Your LESS directory should be broken into three distinct parts: globals, components, and app.less itself. Globals should contain code written in the most abstract, reusable way possible and be written with language that denotes their visual appearance. Think of globals as your block level elements--buttons, forms, type, etc. Globals should be the only place where explicit CSS is written.</p>
 <p>Components should integrate globals as mixins, and be written with language that denotes their &quot;purpose&quot; on the page. Think of components as &quot;sections&quot; or &quot;parts&quot; of a website.</p>
 <p>App.less contains nothing but import statements that compile your components and globals.</p>
