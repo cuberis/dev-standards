@@ -23,5 +23,10 @@
     "title": "WordPress",
     "slug": "wp",
     "subnav": []
+  },
+  {
+    "title": "Contractors",
+    "slug": "contractors",
+    "subnav": []
   }
 ]
