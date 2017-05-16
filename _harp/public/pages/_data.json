@@ -23,10 +23,5 @@
     "title": "WordPress",
     "slug": "wp",
     "subnav": []
-  },
-  {
-    "title": "Drupal",
-    "slug": "drupal",
-    "subnav": []
   }
 ]
