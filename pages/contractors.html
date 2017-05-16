@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuberis Standards</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|PT+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/standards/assets/css/app.css">
+  </head>
+  <body class="page-pages">
+    <header class="main-header">
+
+    </header>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <aside class="col-sm-4 col left-col">
+          <nav class="bar-nav">
+            <a class="logo" href="http://cuberis.com" title="Cuberis"><img src="/standards/assets/img/cuberis_logo.png" alt="Cuberis"></a>
+            <h3 class="site-title">Standards &amp; Practices</h3>
+            <ul>
+              <li>
+                <a href="/standards/">Home</a>
+              </li>
+          
+            
+              <li>
+                <a href="/standards/pages/setup">Project Setup</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/standards/pages/git">GIT and GitHub</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/standards/pages/css">CSS</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/standards/pages/js">Javascript</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/standards/pages/wp">WordPress</a>
+              </li>
+            
+          
+            
+              <li class="active">
+                <a href="/standards/pages/contractors">Contractors</a>
+              </li>
+            
+          
+            </ul>
+          </nav>
+        </aside>
+        <main class="col-sm-8 col-sm-offset-4 col right-col">
+          
+            
+
+          
+
+          
+            <h1>Contractors</h1>
+          
+
+          <p>All third-party contractors employed by Cuberis are required to follow the guidelines set forth in this website. If at any point a situation arrises where a deviation is warranted, please contact Cuberis before proceeding. Below are some general guidelines for contractors.</p>
+<h3>Communication</h3><p>Cuberis uses the Teamwork platform for both internal and client facing communication. Unless otherwise specified, contractors should ensure before posting a message/comment in Teamwork that it is only visible to Cuberis and <strong>not</strong> the client.</p>
+<p>Cuberis Teamwork login - <a href="https://cuberis.teamwork.com">https://cuberis.teamwork.com</a>.</p>
+<h3>Workflow</h3><p>These steps are listed in order:</p>
+<h4>1. Work Locally</h4><p>In all cases, local development is preferred. Work should never be done directly to a LIVE or Staging site, but coded and tested on a version of the site that lives on your local machine. See <a href="/standards/pages/setup">Project Setup</a> for more information on getting setup.</p>
+<h4>2. Setting up a Staging Environment</h4><p>In almost all cases, a staging site will be utilized to preview and QA code. A Cuberis team member will create the staging environment, however, it is up to the contractor to upload files and import databases as needed to the staging site.</p>
+<h4>3. Pushing to GitHub</h4><p>A Cuberis team member will provide a repository for the project. This repository should be the single source of truth for a website&#39;s code base. Contractors should always work in their own separate branch, never in the DEV or MASTER branch. When work is ready to be pushed to staging, the branch can be pushed up and a Pull Request created. Pull Requests will be evaluated by a Cuberis Team member and merged into the appropriate branch when code is approved. A typical git workflow would be as follows:</p>
+<pre><code>cd into your local git repo
+git checkout master
+git pull origin master
+git checkout -b [your-branch-name-here]
+
+... do your work ...
+... all changes are commited ...
+... work is complete and ready to push ...
+
+git push -u origin [your-branch-name-here]
+</code></pre><p>Then on Github.com, visit the repo, and create a new Pull Request and notify a Cuberis team member. See <a href="/standards/pages/git">Git and GitHub</a> for more information.</p>
+<h4>4. Deploying to Staging</h4><p>Once a Pull Request has been successfully approved and merged, you may deploy the code to the staging site using your FTP/SFTP method of choice.</p>
+<h3>Deploying to LIVE site</h3><p>Under no circumstances should code be pushed to a LIVE production site. Please contact a Cuberis team member for more information.</p>
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/standards/assets/js/nilla.js"></script>
+    <script src="/standards/assets/js/app.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  </body>
+</html>
