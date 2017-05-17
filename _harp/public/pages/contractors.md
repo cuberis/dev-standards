@@ -5,6 +5,14 @@ Cuberis uses the Teamwork platform for both internal and client facing communica
 
 Cuberis Teamwork login - [https://cuberis.teamwork.com](https://cuberis.teamwork.com).
 
+### Administration
+
+Cuberis distinguishes between two kinds of work: projects and maintenance. Because we bill these two distinct kinds of work differently, time must always be logged under the proper category.
+
+For employees, our Harvest time keeping system includes projects under each client's name. All project work should be logged to that account using the proper sub category. For all maintenance tasks we have set up a “Maintenance” client which has a list of every active client preceded with “MNT:”. All maintenance work needs to be logged to these accounts. For employees, your Harvest entries should always be rounded up to the nearest 15 minute increment. Use the Teamwork task name including the ID# in your descriptions.
+
+For contractors, please report your time on projects separately from your time on maintenance tasks. You may report this time in any fashion you prefer, so long as each item is labeled as “project” or “maintenance.”
+
 ### Workflow
 
 These steps are listed in order:

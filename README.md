@@ -7,12 +7,12 @@ A [Harp.js](http://harpjs.com/) project viewable at [http://cuberis.github.io/st
 ```
 harp server
 ```
-Run a local site served from the `_harp` folder.
+^ Run a local site served from the `_harp` folder.
 
 ```
 harp compile _harp .
 ```
-Run this from the root directory to compile all files from the `_harp` folder.
+^ Run this from the root directory to compile all files from the `_harp` folder.
 
 
 ## Sidebar
