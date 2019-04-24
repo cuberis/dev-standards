@@ -2,18 +2,35 @@
 
 A [Harp.js](http://harpjs.com/) project viewable at [http://cuberis.github.io/standards/](http://cuberis.github.io/standards/).
 
-## Harp Commands
+## Development
 
-```
-harp server
-```
-^ Run a local site served from the `_harp` folder.
+This project is built using the [Harp.js](http://harpjs.com/) static site generator. All source pages are located in the `_harp` folder and written in markdown.
 
-```
-harp compile _harp .
-```
-^ Run this from the root directory to compile all files from the `_harp` folder.
+### harp.json
 
+When developing locally, make sure `globals.base_url` is set to `""`. When compiling, change this to `"/standards"`.
+
+### Getting Started
+
+Start the harp server locally for LESS compiling and a `http://localhost` dev url.
+
+```shell
+$ cd _harp
+$ harp server
+```
+
+### Compiling
+
+Run this from the root directory to compile all files from the `_harp` folder.
+
+```shell
+$ cd ../project-root
+$ harp compile _harp
+```
+
+### Deploying
+
+Merge changes into `gh-pages` branch.
 
 ## Sidebar
 
