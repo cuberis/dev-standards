@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuberis Standards</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|PT+Mono' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600,700|PT+Mono' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/standards/assets/css/app.css">
   </head>
   <body class="page-pages">
@@ -17,8 +17,8 @@
       <div class="row-fluid">
         <aside class="col-sm-4 col left-col">
           <nav class="bar-nav">
-            <a class="logo" href="http://cuberis.com" title="Cuberis"><img src="/standards/assets/img/cuberis_logo.png" alt="Cuberis"></a>
-            <h3 class="site-title">Standards &amp; Practices</h3>
+            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/standards/assets/img/cuberis_logo.png" alt="Cuberis"></a>
+            <h3 class="site-title">Dev Standards</h3>
             <ul>
               <li>
                 <a href="/standards/">Home</a>
@@ -26,13 +26,7 @@
           
             
               <li>
-                <a href="/standards/pages/setup">Project Setup</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/standards/pages/git">GIT and GitHub</a>
+                <a href="/standards/pages/html">HTML/Markup (TBD)</a>
               </li>
             
           
@@ -43,8 +37,20 @@
             
           
             
+              <li class="active">
+                <a href="/standards/pages/php">PHP (TBD)</a>
+              </li>
+            
+          
+            
               <li>
-                <a href="/standards/pages/js">Javascript</a>
+                <a href="/standards/pages/js">JavaScript</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/standards/pages/workflow">Workflow (TBD)</a>
               </li>
             
           
@@ -65,10 +71,23 @@
         </aside>
         <main class="col-sm-8 col-sm-offset-4 col right-col">
           
+            
 
           
 
           
+            <h1 class="page-title">PHP (TBD)</h1>
+          
+
+          <h2>Philosophy</h2><p>...</p>
+<h2>Documenting</h2><h3>PHP code should be self documenting</h3><p>For ease of readability, variable names should visually represent their purpose. Do not use abbreviations or letters for variable names without good reason.</p>
+<pre><code>// Good
+$background_image = &#39;/path-to-my-image.jpg&#39;;
+
+// Bad
+$bi = &#39;/path-to-my-image.jpg&#39;;
+</code></pre><h3>Doc Blocks</h3><p>Every function must be documented with a doc block.</p>
+<h2>PHP In HTML</h2><p>...</p>
 
         </main>
       </div>
@@ -84,6 +103,6 @@
     </footer>
     <script src="/standards/assets/js/nilla.js"></script>
     <script src="/standards/assets/js/app.js"></script>
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </body>
 </html>
