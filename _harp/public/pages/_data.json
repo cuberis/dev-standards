@@ -1,12 +1,7 @@
 [
   {
-    "title": "Project Setup",
-    "slug": "setup",
-    "subnav": []
-  },
-  {
-    "title": "GIT and GitHub",
-    "slug": "git",
+    "title": "HTML/Markup (TBD)",
+    "slug": "html",
     "subnav": []
   },
   {
@@ -15,8 +10,18 @@
     "subnav": []
   },
   {
-    "title": "Javascript",
+    "title": "PHP (TBD)",
+    "slug": "php",
+    "subnav": []
+  },
+  {
+    "title": "JavaScript",
     "slug": "js",
+    "subnav": []
+  },
+  {
+    "title": "Workflow (TBD)",
+    "slug": "workflow",
     "subnav": []
   },
   {

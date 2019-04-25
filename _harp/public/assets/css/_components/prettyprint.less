@@ -9,9 +9,22 @@ pre{
   border-radius: 0;
   background: @gray-lighter;
   font-family: @font-family-monospace;
-  font-size: 16px;
+  color: @brand-secondary;
+
   &.prettyprint.prettyprinted{
     padding: 25px 50px;
     border: none;
+  }
+}
+
+.prettyprinted {
+  .com {
+    color: gray;
+  }
+  .pln {
+    color: @brand-secondary;
+  }
+  .kwd {
+    color: @brand-danger;
   }
 }
