@@ -1,44 +1,44 @@
-Cuberis use GIT for version control and GitHub for a number of development task. GitHub remote repositories, project development documentation, project issues and development specific discussion. The goal is to keep documentation and discussion in context and project a central location for all information related to development projects. Additionally, deployment of most projects is tied to the Master branch in GitHub in conjunction with DeployHQ.
+<h1 class="page-title">
+  Git + GitHub
+</h1>
 
-For a general introduction to GIT Cuberis has a Codeschool account with excellent video training. That login is available via LastPass.
+## Introduction
 
-Basic online walk through and introduction to GIT and GitHub
+Cuberis uses GIT for version control and GitHub for a number of development tasks, i.e. project development documentation, project issues and development specific discussion. The goal is to keep all documentation and discussion in context and provide a central location for all information related to  projects.
 
-https://try.github.io/levels/1/challenges/1
-
-Cheat Sheet of Git Commands
+## Cheat Sheet of Git Commands
 
 https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf
 
 The following provides a High Level over of the most common operations and Cuberis standard practices. Additionally, you can use once of server GUI applications including GitHub for Mac/Windows or SourceTree
 
-### Introduction to Basic Methods
+## Introduction to Basic Methods
 
 The most common methods required for GIT are:
 
-* <code>git init</code>
-* <code>git status</code>
-* <code>git branch &lt;branch name&gt;</code>
-* <code>git checkout &lt;branch name&gt;</code>
-* <code>git add -A</code>
-* <code>git commit -a</code>
-* <code>git push / git push -u origin &lt;branch name&gt;</code>
+* `git init`
+* `git status`
+* `git branch <branch name>`
+* `git checkout <branch name>`
+* `git add -A`
+* `git commit -a`
+* `git push / git push -u origin <branch name>`
 
-#### git init
+### git init
 
 Initializes a GIT repository so that you can begin tracking files.
 
 Example Response:
 
-<pre>
+```shell
 Initialized empty Git repository in /Users/name/Cuberis/example-project/.git/
-</pre>
+```
 
-#### git status
+### git status
 
 Provides current status, providing details of current branch, Files untracked, changed and deleted.
 
-<pre>
+```shell
 On branch master
 
 Initial commit
@@ -49,31 +49,31 @@ Untracked files:
 	index.html
 
 nothing added to commit but untracked files present (use "git add" to track)
-</pre>
+```
 
-#### git branch &lt;branch name&gt;
+### git branch &lt;branch name&gt;
 
 This command is used to create a new branch off of your current branch
 
-#### git checkout &lt;branch name&gt;
+### git checkout &lt;branch name&gt;
 
 Swaps your current branch
 
-#### git add -A / git add path/to/file
+### git add -A / git add path/to/file
 
 Add files to be tracked in a GIT project. Tracked files will be pushed to GitHub and have a history from the time that they are added forward.
 
-#### git commit -a
+### git commit -a
 
 A commit represents a point in the files history that can be referenced. Commits should be main frequently in order to provide adequate references to changes and progress. Commits should take place whenever new functionality is working, or if a developer is breaking from the work for any reason. Commits that take place mid work should be marked as such.
 
-#### git push / git push -u origin &lt;branch name&gt;
+### git push / git push -u origin &lt;branch name&gt;
 
 A push stores your local code on GitHub where it can be accessed by the rest of the team. To push your current branch, if it is already available on GitHub, is simpley <code>git push</code>. In order to add your local branch to GitHub a <code>git push -u origin &lt;branch name&gt;</code> is required
 
 Example Response:
 
-<pre>
+```shell
 Counting objects: 3, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
@@ -82,16 +82,16 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/cuberis/example.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
-</pre>
+```
 
 
-### .gitignore Files
+## .gitignore Files
 
 Using an appropriate .gitignore file is critical.
 
 Cuberis' default .gitignore files are include in project baselines but may also be found on the  [Cuberis Gists Page](https://gist.github.com/cuberis).
 
-### Branches
+## Branches
 
 Cuberis has a specific branching structure for developing, staging and shipping code.
 
@@ -103,7 +103,7 @@ The 'dev' branch as sub branches labeled to indicate purpose.
 - **feature/feature-name** : These branches are used in primary production as well as for ongoing development of new features. There may be more than one of these branches to a feature as one may include backend or functional code while the other contains frontend.
 - **styles/general** : This branch and associated branches are for the creation and implementation of general purpose CSS/JS that are not directly associate with specific components.
 
-### Committing
+## Committing
 
 When working with GIT it is important to commit regularly and to include concise and descriptive commit messages. The goal of commit messages is to provide information about what the commit involved.
 
@@ -119,7 +119,8 @@ https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message
   * If related to an issue provide a link to that issue
 
 Example:
-```
+
+```shell
 Clear Errors on Modal Close
 
 Clear JS errors when User closes login or Registraition modals.
@@ -137,5 +138,4 @@ Original Issue: https://github.com/cuberis/greenspon/issues/209
 # Changes to be committed:
 #       modified:   example/file/path.less
 #
-
 ```
