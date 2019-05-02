@@ -1,12 +1,18 @@
 ## Introduction
 
-Cuberis works to constantly improve and iterate development practices to ensure reliablity and stability of projects. This also helps interoperability of projects between team members and helps with long term support. This documentation provides a reference to preferred standards and practices for the Cuberis Team. A unified set of practices helps the team work in a cohesive and efficient manner.
+Welcome to the Standards Documentation for the Cuberis Development Team 👋! The goal of this document is to provide a reference for our preferred standards and practices regarding web development. By adhering to these standards, we ensure all team members (internal or external) can work efficiently between projects while also focusing on long-term maintainability.
 
-The resources of this site are provide a internal and external reference to the practices and preferences of the cuberis development team.
+## Who is this for?
 
-## Mission
+The intended audience for this document is developers. If you aren't familiar with writing HTML, CSS, PHP and/or JavaScript, this is not going to be for you!
 
-The goal in all of our work is to craft engaging and effective user expereinces that are preformant for users and extensible in the future. The standards herein provide a framework ensure that work can be built upon in the future.
+## Philosophy
+
+Although, we build complex things, we aim to keep our code as simple and easy to understand as possible. Readability of code should always be favored over cleverness. This ensures that when a future developer picks up part a project, they will not have to spend too long getting up to speed with how things work.
+
+> All code in any code-base should look like a single person typed it, no matter how many people contributed. – [Principles of Writing Consistent, Idiomatic JavaScript](https://github.com/rwaldron/idiomatic.js/)
+
+Also, we build websites for all people which means we want our websites to be as inclusive as possible. This means a strong emphasis on [HTML semantics](/standards/html#semantics) as well as [accessibility](/standards/html#accessibility). Be kind to your users 💖!
 
 ## Tabs or Spaces?
 
