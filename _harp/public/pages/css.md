@@ -1,6 +1,6 @@
 ## Introduction
 
-Our preferred method of writing CSS is using [SASS](https://sass-lang.com/), a CSS pre-processing language that allows you to use variables, nested rules, functions and more. This helps keep large stylesheets well-organized in smaller files as well as improving maintainability for the life of a website.
+Our preferred method of writing CSS is using [Sass](https://sass-lang.com/), a CSS pre-processing language that allows you to use variables, nested rules, functions and more. This helps keep large stylesheets well-organized in smaller files as well as improving maintainability for the life of a website.
 
 ## Frameworks
 
@@ -10,7 +10,7 @@ We use [Bootstrap](https://getbootstrap.com/) for our framework of choice. New p
 
 For some projects, it makes sense to adopt a utility-class-first approach. In those instances, our go-to is [Tachyons](https://tachyons.io/) 🔥!
 
-## CSS & SASS Guidelines
+## CSS & Sass Guidelines
 
 ### General Guidelines
 
@@ -92,7 +92,7 @@ IDs should generally be reserved for targeting DOM elements via JavaScript. View
 
 ## main.scss
 
-Our typical project structure includes one `main.scss` file that contains nothing but import statements to compile your partial SASS files. Partial files are prefixed with an underscore and typically broken into subfolders.
+Our typical project structure includes one `main.scss` file that contains nothing but import statements to compile your partial Sass files. Partial files are prefixed with an underscore and typically broken into subfolders.
 
 Our `main.scss` file then looks something like this:
 

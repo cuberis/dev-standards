@@ -3,12 +3,12 @@
 Let's face it, the web is built with HTML and we write a ton of it 👨‍💻. So let's aim write it well! Besides, who wants to wade through a sea of `<div>`s all day!
 
 ## Semantics
-When writing HTML markup, semantics are very, very important. Semantics actually give meaning to your markup which helps with readability, maintainability, accessibility and other benefits. An example of semantic markup would be using a `<nav>` element for a menu instead of a `<div>` tag, or an `<article>` tag for a blog post. Example of good semantics:
+When writing HTML markup, semantics are very, very important. Semantics actually give meaning to your markup which helps with readability, maintainability, accessibility and other benefits. Elements should be used for their intended semantic purpose, i.e. a `<nav>` element for a menu instead of a `<div>`, a `<button>` for a button, or an `<article>` tag for a blog post. An example of good semantics:
 
 ```
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">The Title</h1>
+    <h2 class="post-title">The Title</h2>
     <time class="post-date">April, 26, 2019</time>
   </header>
   <p>The content</p>
@@ -20,7 +20,7 @@ An example not using semantics:
 ```
 <div class="post">
   <div class="post-header">
-    <h1 class="post-title">The Title</h1>
+    <h2 class="post-title">The Title</h2>
     <div class="post-date">April, 26, 2019</div>
   </div>
   <p>The content</p>

@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Cuberis uses GIT for version control and GitHub for a number of development tasks, i.e. project development documentation, project issues and development specific discussion. The goal is to keep all documentation and discussion in context and provide a central location for all information related to  projects.
+Cuberis uses Git for version control and GitHub for a number of development tasks, i.e. project development documentation, project issues and development specific discussion. The goal is to keep all documentation and discussion in context and provide a central location for all information related to  projects.
 
 ## Cheat Sheet of Git Commands
 
@@ -14,7 +14,7 @@ The following provides a High Level over of the most common operations and Cuber
 
 ## Introduction to Basic Methods
 
-The most common methods required for GIT are:
+The most common methods required for Git are:
 
 * `git init`
 * `git status`
@@ -26,7 +26,7 @@ The most common methods required for GIT are:
 
 ### git init
 
-Initializes a GIT repository so that you can begin tracking files.
+Initializes a Git repository so that you can begin tracking files.
 
 Example Response:
 
@@ -61,7 +61,7 @@ Swaps your current branch
 
 ### git add -A / git add path/to/file
 
-Add files to be tracked in a GIT project. Tracked files will be pushed to GitHub and have a history from the time that they are added forward.
+Add files to be tracked in a Git project. Tracked files will be pushed to GitHub and have a history from the time that they are added forward.
 
 ### git commit -a
 
@@ -105,7 +105,7 @@ The 'dev' branch as sub branches labeled to indicate purpose.
 
 ## Committing
 
-When working with GIT it is important to commit regularly and to include concise and descriptive commit messages. The goal of commit messages is to provide information about what the commit involved.
+When working with Git it is important to commit regularly and to include concise and descriptive commit messages. The goal of commit messages is to provide information about what the commit involved.
 
 https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message
 
@@ -121,13 +121,13 @@ https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message
 Example:
 
 ```shell
-Clear Errors on Modal Close
+clear errors on modal close
 
-Clear JS errors when User closes login or Registraition modals.
-Change in behavior requested by client.
-Listen to .close class and empty() .js-errors & removeClass('error') from .required
+- clear JS errors when user closes login or registration modals.
+- change in behavior requested by client.
+- listen to .close class and empty() .js-errors and removeClass('error') from .required
 
-Original Issue: https://github.com/cuberis/greenspon/issues/209
+original issue: https://github.com/cuberis/greenspon/issues/209
 
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
