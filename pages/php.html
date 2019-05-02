@@ -5,20 +5,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuberis Standards</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600,700|PT+Mono' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600|PT+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/standards/assets/css/app.css">
   </head>
   <body class="page-pages">
-    <header class="main-header">
-
-    </header>
+<!--
+ ______   __  __    _______   ______   ______     ________  ______
+/_____/\ /_/\/_/\ /_______/\ /_____/\ /_____/\   /_______/\/_____/\
+\:::__\/ \:\ \:\ \\::: _  \ \\::::_\/_\:::_ \ \  \__.::._\/\::::_\/_
+ \:\ \  __\:\ \:\ \\::(_)  \/_\:\/___/\\:(_) ) )_   \::\ \  \:\/___/\
+  \:\ \/_/\\:\ \:\ \\::  _  \ \\::___\/_\: __ `\ \  _\::\ \__\_::._\:\
+   \:\_\ \ \\:\_\:\ \\::(_)  \ \\:\____/\\ \ `\ \ \/__\::\__/\ /____\:\
+    \_____\/ \_____\/ \_______\/ \_____\/ \_\/ \_\/\________\/ \_____\/
+-->
+    <header class="main-header"></header>
     <div class="container-fluid">
       <div class="row-fluid">
         <aside class="col-sm-4 col left-col">
           <nav class="bar-nav">
-            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/assets/img/cuberis_logo.png" alt="Cuberis"></a>
-            <h3 class="site-title">Dev Standards</h3>
+            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/standards/assets/img/cuberis_logo.png" alt="Cuberis"></a>
+            <h3 class="site-title">Development Standards</h3>
             <ul>
               <li>
                 <a href="/standards/">Home</a>
@@ -26,43 +32,43 @@
           
             
               <li>
-                <a href="/pages/html">HTML/Markup (TBD)</a>
+                <a href="/standards/pages/html">HTML/Markup</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/css">CSS</a>
+                <a href="/standards/pages/css">CSS</a>
               </li>
             
           
             
               <li class="active">
-                <a href="/pages/php">PHP (TBD)</a>
+                <a href="/standards/pages/php">PHP</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/js">JavaScript</a>
+                <a href="/standards/pages/js">JavaScript</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/workflow">Workflow (TBD)</a>
+                <a href="/standards/pages/workflow">Workflow</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/wp">WordPress</a>
+                <a href="/standards/pages/wp">WordPress</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/contractors">Contractors</a>
+                <a href="/standards/pages/contractors">Contractors</a>
               </li>
             
           
@@ -76,18 +82,120 @@
           
 
           
-            <h1 class="page-title">PHP (TBD)</h1>
+            <h1 class="page-title">PHP</h1>
           
 
-          <h2>Philosophy</h2><p>...</p>
+          <h2>Introduction</h2><p>Since Cuberis primarily builds on WordPress, our PHP standards, for the most part, follow the <a href="https://codex.wordpress.org/WordPress_Coding_Standards">WordPress Coding Standards</a>. PHP code should be well documented and easy to read so that code is easily debugged, extended and maintained.</p>
 <h2>Documenting</h2><h3>PHP code should be self documenting</h3><p>For ease of readability, variable names should visually represent their purpose. Do not use abbreviations or letters for variable names without good reason.</p>
 <pre><code>// Good
 $background_image = &#39;/path-to-my-image.jpg&#39;;
 
 // Bad
 $bi = &#39;/path-to-my-image.jpg&#39;;
-</code></pre><h3>Doc Blocks</h3><p>Every function must be documented with a doc block.</p>
-<h2>PHP In HTML</h2><p>...</p>
+</code></pre><p>Well written PHP should almost read as easy as reading a sentence.</p>
+<pre><code>// Good
+foreach ( $images as $image ) {
+  $background_is_enabled = $image[&#39;has_bg&#39;];
+  if ( $background_is_enabled ) {
+    $class_name = &#39;bg-enabled&#39;;
+  }
+}
+
+// Bad
+foreach ( $a as $b ) {
+  $bg = $image[&#39;has_bg&#39;];
+  if ( $bg ) {
+    $c = &#39;bg-enabled&#39;;
+  }
+}
+</code></pre><h3>Doc Blocks</h3><p>Every function must be documented with a doc block. The more descriptive the better.</p>
+<pre><code>/**
+ * My function name.
+ * Any helpful notes about what this function can
+ * go here. Line length should be kept relatively short
+ * to avoid line breaks on smaller screens.
+ *
+ * @param  string $var_one Description goes here.
+ * @param  array  $var_two Description goes here.
+ * @return string          What gets returned.
+ */
+function my_function_name( $var_one, $var_two ) {
+</code></pre><p><em>Notice how everything lines up!</em> 💪</p>
+<h2>PHP In HTML</h2><p>When writing HTML in PHP blocks, close your php and indent HTML on a new line. This way, if you need to adjust the markup, you don&#39;t have to shift your PHP around. PHP blocks should be indented to match the surround HTML code. Closing PHP blocks should match the same indentation level as the opening block.</p>
+<pre><code>// Good
+&lt;?php if ( boolean ) : ?&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    &lt;?php foreach ( $things as $thing ) : ?&gt;
+      &lt;div&gt;
+        &lt;h2&gt;Hello World&lt;/h2&gt;
+      &lt;/div&gt;
+    &lt;?php endforeach; &gt;
+  &lt;/div&gt;
+&lt;?php endif; ?&gt;
+
+
+// Bad
+&lt;?php if ( boolean ) { ?&gt;
+  &lt;div class=&quot;col&quot;&gt;
+    ...
+  &lt;/div&gt;
+&lt;?php } ?&gt;
+
+
+// Bad
+&lt;?php
+if ( boolean ) {
+  echo &#39;&lt;div class=&quot;col&quot;&gt;&#39;;
+  foreach ( $things as $thing ) {
+    echo &#39;&lt;div&gt;&#39;;
+    echo &#39;&lt;h2&gt;Hello World&lt;/h2&gt;&#39;;
+    echo &#39;&lt;/div&gt;&#39;;
+  }
+  echo &#39;&lt;/div&gt;&#39;;
+} ?&gt;
+
+
+// Avoid doc syntaxes all-together
+echo &lt;&lt;&lt;HTML
+&lt;div class=&quot;test {$a}&quot;&gt;test&lt;/div&gt;
+HTML;
+?&gt;
+</code></pre><h2>Naming Things</h2><p>Function names should be all lowercase and classes should be Pascal cased, both with underscores between words. Class methods and vars should also be all lowercase with underscores. Additionally functions and methods should be descriptively named according to what they do.</p>
+<pre><code>// A function
+function get_background_image_url() {
+  ...
+}
+
+// A class
+class My_Awesome_Class {
+
+  public $my_var;
+
+  public function my_method() {
+    ...
+  }
+
+}
+</code></pre><p>Variables should be named in such a way that makes it easy to understand what it contains. In the below example, if we have a variable named <code>$post_id</code>, it is immediately clear this is the id of a post. Whereas, if it was just named <code>$p</code>, you could not be sure if it was the entire post object or just the id itself. In long complex code structures, this becomes incredibly important for readability and debugging.</p>
+<pre><code>// Good
+$post_id = get_the_ID();
+
+// Bad
+$p = get_the_ID();
+</code></pre><h2>Other Best Practices</h2><pre><code>// Declare your variables close to where they are first used
+$var = &#39;&#39;;
+if ( boolean ) {
+  $var = &#39;string&#39;;
+}
+
+
+// Ternary operators are preferred over if/else or switch where possible
+$body_class = ! empty($array) ? &#39;my-class&#39; : &#39;&#39;;
+</code></pre><h2>Never, ever...</h2><pre><code>// Never use PHP short tags. These have to be explicitly enabled
+// for the server to correctly parse them. If not enabled, this
+// code can produce a fatal error.
+&lt;? echo &#39;something&#39;; ?&gt;
+</code></pre>
 
         </main>
       </div>
@@ -101,8 +209,8 @@ $bi = &#39;/path-to-my-image.jpg&#39;;
         </div>
       </div>
     </footer>
-    <script src="/assets/js/nilla.js"></script>
-    <script src="/assets/js/app.js"></script>
+    <script src="/standards/assets/js/nilla.js"></script>
+    <script src="/standards/assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </body>
 </html>

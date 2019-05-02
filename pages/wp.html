@@ -5,20 +5,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuberis Standards</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600,700|PT+Mono' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600|PT+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/standards/assets/css/app.css">
   </head>
   <body class="page-pages">
-    <header class="main-header">
-
-    </header>
+<!--
+ ______   __  __    _______   ______   ______     ________  ______
+/_____/\ /_/\/_/\ /_______/\ /_____/\ /_____/\   /_______/\/_____/\
+\:::__\/ \:\ \:\ \\::: _  \ \\::::_\/_\:::_ \ \  \__.::._\/\::::_\/_
+ \:\ \  __\:\ \:\ \\::(_)  \/_\:\/___/\\:(_) ) )_   \::\ \  \:\/___/\
+  \:\ \/_/\\:\ \:\ \\::  _  \ \\::___\/_\: __ `\ \  _\::\ \__\_::._\:\
+   \:\_\ \ \\:\_\:\ \\::(_)  \ \\:\____/\\ \ `\ \ \/__\::\__/\ /____\:\
+    \_____\/ \_____\/ \_______\/ \_____\/ \_\/ \_\/\________\/ \_____\/
+-->
+    <header class="main-header"></header>
     <div class="container-fluid">
       <div class="row-fluid">
         <aside class="col-sm-4 col left-col">
           <nav class="bar-nav">
-            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/assets/img/cuberis_logo.png" alt="Cuberis"></a>
-            <h3 class="site-title">Dev Standards</h3>
+            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/standards/assets/img/cuberis_logo.png" alt="Cuberis"></a>
+            <h3 class="site-title">Development Standards</h3>
             <ul>
               <li>
                 <a href="/standards/">Home</a>
@@ -26,43 +32,43 @@
           
             
               <li>
-                <a href="/pages/html">HTML/Markup (TBD)</a>
+                <a href="/standards/pages/html">HTML/Markup</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/css">CSS</a>
+                <a href="/standards/pages/css">CSS</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/php">PHP (TBD)</a>
+                <a href="/standards/pages/php">PHP</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/js">JavaScript</a>
+                <a href="/standards/pages/js">JavaScript</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/workflow">Workflow (TBD)</a>
+                <a href="/standards/pages/workflow">Workflow</a>
               </li>
             
           
             
               <li class="active">
-                <a href="/pages/wp">WordPress</a>
+                <a href="/standards/pages/wp">WordPress</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/contractors">Contractors</a>
+                <a href="/standards/pages/contractors">Contractors</a>
               </li>
             
           
@@ -79,63 +85,64 @@
             <h1 class="page-title">WordPress</h1>
           
 
-          <p>Cuberis often uses WordPress to create client sites and develops custom functionality through plugin and them integrations as needed.</p>
-<h3>Theme Development</h3><p>Cuberis uses a modified version the Roots.io/sage theme (based on version 8.5). This provides significant development advatages including Gulp powered preprocessing, linting, minification, and concatenation. Additionally, the theme uses Browsersync to smooth testing and allows the ability to navigate pages in multiple browsers.</p>
-<p>For documentation specifically related to theme features please refer to the documenation at <a href="https://roots.io/sage/docs/">https://roots.io/sage/docs/</a>.</p>
-<p>For more information, see the <a href="https://github.com/cuberis/cuberis-base">Base Theme Repo</a> or checkout the <a href="https://github.com/cuberis/cuberis-base/wiki">Wiki Docs</a>.</p>
-<h3>DRY Methodology</h3><p>At Cuberis, we make a great effor to conform to the <strong>DRY</strong> principle which simply means <strong>D</strong>on&#39;t <strong>R</strong>epeat <strong>Y</strong> ourself. This means if there is ever a case when, you are copying and pasting the same code between multiple templates, you are not being DRY! By adhering to the DRY principle, we ensure that our code is clean, more readable and most importantly, easier to update and maintain.</p>
-<h3>Getting Started with the Base Theme</h3><p>See more information in the <a href="https://github.com/cuberis/cuberis-base/blob/master/README.md">Base Theme Readme</a>.</p>
-<h4>Dependencies</h4><ol>
-<li>Install <a href="http://gulpjs.com/">gulp</a> and <a href="http://bower.io/">Bower</a> from the command line globally with <code>npm install -g gulp bower</code>.</li>
-<li>Navigate to the theme directory, then from the command line, run <code>npm install</code> (may need to be run with <code>sudo</code>).</li>
-<li>Run <code>bower install</code>.</li>
-</ol>
-<h4>Compiling Assets</h4><p>The base theme is setup to look for all CSS and JS in the <code>/dist</code> folder located in the theme. Run the following commands from the command line to auto-compile your assets to that location:</p>
-<ol>
-<li><code>gulp</code> - compiles all JS and CSS to the <code>/dist</code> folder in the theme</li>
-<li><code>gulp js</code> or <code>gulp styles</code> - compiles only the requested Assets</li>
-<li><code>gulp watch</code> - starts a BrowserSync server at <a href="http://localhost:3000">http://localhost:3000</a></li>
-<li><code>gulp --production</code> - prepares assets for production and compiles to the <code>/dist</code> folder</li>
-</ol>
-<h4>BrowserSync</h4><p>Make sure you update your local URL that you want BroserSync to serve the site from. Update this in <code>/assets/manifest.json</code> and change the <code>devUrl</code>.</p>
-<h3>Theme Templates</h3><p>Before getting started with templates in the Base Theme, you will want to read up on the <a href="https://roots.io/sage/docs/theme-templates/">Sage Documentation</a>. The base theme does not follow the typical WordPress theme structure. However, it does still use the <a href="http://codex.wordpress.org/Template_Hierarchy">WordPress Template Hierarchy</a>. For more information on how to add/customize template files, see <a href="https://roots.io/sage/docs/theme-templates/">Sage: Theme Templates</a>.</p>
-<h3>The Functions File</h3><p>As a general practice Cuberis embraces the file structure concepts of Sage. Assets and Function are placed in folders and referenced accordingly.</p>
-<p>The <code>functions.php</code> file is only used to reference appropriate files in the lib folder.</p>
-<p>This allows for subfolders to include advanced functionality including external libraries with out crowding the theme&#39;s root directory. An example might be a custom, theme specific external integration to APIs like Zendesk or Stripe.</p>
-<h3>File structure</h3><p>Every WordPress project built on the Base Theme should always follow the following folder structure:</p>
-<pre><code>|-- acf-json
-|-- assets
-    |-- fonts
-    |-- images
-    |-- scripts
-        |-- vendor
-        |-- main.js
-    |-- styles
-        |-- base
-        |-- components
-        |-- layouts
-        |-- vendor
-        |-- main.scss
-    |-- manifest.json
-|-- components
-|-- lang
-|-- lib
-|-- templates
-</code></pre><h4>acf-json</h4><p>This folder is used for syncing Advanced Custom Field Groups with local copies in the theme. For more info, see <a href="https://www.advancedcustomfields.com/resources/local-json/">ACF: Local JSON</a>.</p>
-<h4>assets/images</h4><p>All images used in the theme live here</p>
-<h4>assets/scripts</h4><p>All JavaScript used in the theme should live here. All theme specific JS can be included in the main.js file. Typically functions are written as standalone functions outside of the DOM-based routing function. Then inside <code>var Sage</code>, you can call your function only on the page(s) that requires it.</p>
-<h4>assets/styles</h4><p>All styles used in the theme should live here. For CSS, we are using <a href="http://sass-lang.com/">Sass</a>. Modularize your Sass into separate, logically named files and then import into <code>assets/styles/main.scss</code>.</p>
-<h4>assets/.../vendor</h4><p>Any third-party libraries included in the theme should live in the appropriate vendor folder - either <code>/styles/vendor</code> or <code>scripts/vendor</code>. These assets can then be included in <code>/assets/manifest.json</code> to be compiled correctly. This route should only be taken if the library cannot be installed with Bower (see Bower section below).</p>
-<h4>components</h4><p>Partial files for the Cuberis Components system. See <code>componify()</code> in lib/extras.php</p>
-<h4>lib</h4><p>This is where all of your partial files live for importing into the main <code>functions.php</code>. Each file should be modularized and only contain discrete functionality. Additionally, each file should be named appropriately according to the code it contains. For more info, see &quot;The Functions File&quot; section above.</p>
-<h3>Bootstrap</h3><p>Currently we are building on top of <a href="http://getbootstrap.com/">Bootstrap 3</a> for our framework. Bootstrap is being included via Bower. If you do not need all of the JavaScript components that come with the Bootstrap framework, consider removing theme from the <code>bower.json</code> overrides and they will not be included in the build process.</p>
-<h3>Bower</h3><p>Include third-party libraries in your theme using <a href="http://bower.io/">Bower</a>. Overrides can be included in the <code>bower.json</code> file if a custom build is desired. The theme&#39;s gulpfile will automatically attempt to read the <code>bower.json</code> file and include any necessary CSS and JS in the compiling of your theme assets. However, this does not work with every library and in that case, the library can be included directly in your theme assets folder, leaving note of what version of the plugin you are using.</p>
-<h3>Plugins</h3><p>As a rule Cuberis embraces a minimalistic approach to the use of plugins. If functionality can easily be built into the theme, that is prefereable to addition of external plugins. For more complicated enhancements there are several plugins that are used within nearly every project including:</p>
+          <p>Cuberis primarily uses <a href="https://wordpress.org/">WordPress</a> to create fantastic and robust websites. Below outlines our approach to development for WordPress.</p>
+<h2>Themes</h2><p>The <a href="https://github.com/cuberis/cuberis-base">Cuberis Base</a> theme is a modern WordPress starter theme built on top of <a href="https://github.com/roots/sage">Sage</a> (specifically, the version 8.x branch) and modified to our project and development processes. Some areas of interest are a streamlined build process for assets through <a href="https://github.com/JeffreyWay/laravel-mix">Laravel Mix</a> and versioned dependency management with <a href="https://getcomposer.org/">Composer</a> and <a href="https://www.npmjs.com/">npm</a>.</p>
+<p>The theme&#39;s main repository (private, requires access to our organization) can be found on GitHub with additional information on getting started: <a href="https://github.com/cuberis/cuberis-base">https://github.com/cuberis/cuberis-base</a></p>
+<h2>Plugins</h2><p>Cuberis embraces a minimalistic approach to the use of plugins. If functionality can easily be built into the theme, that is preferrable to installing extra plugins. Plugins with ample documentation, frequent update cycles, and flexible APIs are preferred. For more complicated functionality or enhancements, there are several plugins that are used within nearly every project including:</p>
 <ul>
-<li>Advanced Custom Fields</li>
+<li>Advanced Custom Fields PRO</li>
 <li>Gravity Forms</li>
-<li>WordPress SEO</li>
-<li>Backup Buddy</li>
+<li>Yoast SEO</li>
+</ul>
+<h2>Best Practices</h2><p>While this is not an all-compassing list of best practices Cuberis follows when it comes to developing for WordPress, this section serves as a good jumping off point with lessons learned and examples.</p>
+<h3>wp-config</h3><p>When developing for WordPress, always use Debug mode by setting <code>define( &#39;WP_DEBUG, true );</code> in your <code>wp-config.php</code>. On the same note, be sure to set this constant to <code>false</code> on production. Some other sensible defaults to consider for your project are:</p>
+<pre><code>/**
+ * Allows for granular control over logic within the theme for different server environments (this is a custom constant).
+ */
+define( &#39;WP_ENV&#39;, &#39;your_environment_name&#39; ); // examples: &#39;production&#39;, &#39;dev&#39;
+
+/**
+ * Limits the number of revisions WordPress will store. By default, WordPress will store an infinite number of revisions on each post.
+ */
+define( &#39;WP_POST_REVISIONS&#39;, 5 );
+
+/**
+ * Turn off the Theme &amp; Plugin editors as a recommended security measure. Even WordPress discourages their usage.
+ * @source https://codex.wordpress.org/Hardening_WordPress#Disable_File_Editing
+ */
+define( &#39;DISALLOW_FILE_EDIT&#39;, true );
+</code></pre><h3>Don&#39;t Repeat Yourself (DRY) ☔️</h3><p>At Cuberis, we make a great effort to conform to the <strong>DRY</strong> principle. This means if there is ever a case when, you are copying and pasting the same code between multiple templates or functions, you are not being DRY! By adhering to the DRY principle, we ensure that our code is cleaner, more readable and most importantly, easier to update and maintain.</p>
+<h3>Query Performance &amp; Considerations</h3><p>Posts should never be queried directly by their ID. Over time, content changes on a WordPress site and the ID becomes an unrelyable way to query a post. Depending on your use case, consider setting up an ACF Theme Options page to set a page for a specific purpose.</p>
+<pre><code>// No
+$my_custom_404_page = get_post(404);
+
+// Yes
+$my_custom_404_page = get_field(&#39;custom_404_page&#39;, &#39;option&#39;);
+</code></pre><p>To improve query performance, only return what you need. For example, the following arguments would only return an array of post IDs and removes pagination.</p>
+<pre><code>$items = get_posts([
+  &#39;fields&#39;        =&gt; &#39;ids&#39;,
+  &#39;no_found_rows&#39; =&gt; true
+]);
+</code></pre><p>Other recommendations:</p>
+<ul>
+<li>Avoid using <code>posts_per_page =&gt; -1</code>.</li>
+<li>Avoid querying the database directly unless absolutely necessary. Use standard WordPress conventions such as <code>WP_Query</code> or <code>get_posts()</code>.</li>
+<li>Try to remove as much logic from WordPress templates—such as modifying the default query on an archive template using the <code>pre_get_posts</code> filter.</li>
+</ul>
+<h3>Leverage Native WordPress APIs</h3><p>The contributors of WordPress couldn&#39;t have said it any better...</p>
+<p>Using the core APIs when developing for WordPress is strongly encouraged because:</p>
+<ul>
+<li>Core APIs make building things for WordPress easier by providing hooks, actions, filters, helper functions.</li>
+<li>WordPress does the “heavy lifting” for you (database calls, input validation, security, form building) so you don’t have to.</li>
+<li>Using core APIs ensures your code will be both backward-compatible and future-proof.</li>
+<li>The APIs allow seamless integration into wp-admin for plugin/theme options pages, inline help documentation, etc.</li>
+</ul>
+<p>Source: <a href="https://make.wordpress.org/core/handbook/best-practices/core-apis/">https://make.wordpress.org/core/handbook/best-practices/core-apis/</a></p>
+<p>A few exceptions to note:</p>
+<ul>
+<li>We prefer to use Advanced Custom Fields over the <a href="https://codex.wordpress.org/Custom_Fields">Custom Fields</a> API.</li>
+<li>Generally speaking, we avoid <a href="https://codex.wordpress.org/WordPress_Widgets">Widgits</a> as there are more modern and conventional ways to add custom content and features to sites.</li>
+<li><a href="https://codex.wordpress.org/Shortcode_API">Shortcodes</a> are fine but should only be used unless absolutely necessary.</li>
 </ul>
 
         </main>
@@ -150,8 +157,8 @@
         </div>
       </div>
     </footer>
-    <script src="/assets/js/nilla.js"></script>
-    <script src="/assets/js/app.js"></script>
+    <script src="/standards/assets/js/nilla.js"></script>
+    <script src="/standards/assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </body>
 </html>

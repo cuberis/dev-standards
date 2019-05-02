@@ -5,20 +5,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuberis Standards</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600,700|PT+Mono' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600|PT+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/standards/assets/css/app.css">
   </head>
   <body class="page-pages">
-    <header class="main-header">
-
-    </header>
+<!--
+ ______   __  __    _______   ______   ______     ________  ______
+/_____/\ /_/\/_/\ /_______/\ /_____/\ /_____/\   /_______/\/_____/\
+\:::__\/ \:\ \:\ \\::: _  \ \\::::_\/_\:::_ \ \  \__.::._\/\::::_\/_
+ \:\ \  __\:\ \:\ \\::(_)  \/_\:\/___/\\:(_) ) )_   \::\ \  \:\/___/\
+  \:\ \/_/\\:\ \:\ \\::  _  \ \\::___\/_\: __ `\ \  _\::\ \__\_::._\:\
+   \:\_\ \ \\:\_\:\ \\::(_)  \ \\:\____/\\ \ `\ \ \/__\::\__/\ /____\:\
+    \_____\/ \_____\/ \_______\/ \_____\/ \_\/ \_\/\________\/ \_____\/
+-->
+    <header class="main-header"></header>
     <div class="container-fluid">
       <div class="row-fluid">
         <aside class="col-sm-4 col left-col">
           <nav class="bar-nav">
-            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/assets/img/cuberis_logo.png" alt="Cuberis"></a>
-            <h3 class="site-title">Dev Standards</h3>
+            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/standards/assets/img/cuberis_logo.png" alt="Cuberis"></a>
+            <h3 class="site-title">Development Standards</h3>
             <ul>
               <li>
                 <a href="/standards/">Home</a>
@@ -26,43 +32,43 @@
           
             
               <li>
-                <a href="/pages/html">HTML/Markup (TBD)</a>
+                <a href="/standards/pages/html">HTML/Markup</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/css">CSS</a>
+                <a href="/standards/pages/css">CSS</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/php">PHP (TBD)</a>
+                <a href="/standards/pages/php">PHP</a>
               </li>
             
           
             
               <li class="active">
-                <a href="/pages/js">JavaScript</a>
+                <a href="/standards/pages/js">JavaScript</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/workflow">Workflow (TBD)</a>
+                <a href="/standards/pages/workflow">Workflow</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/wp">WordPress</a>
+                <a href="/standards/pages/wp">WordPress</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/contractors">Contractors</a>
+                <a href="/standards/pages/contractors">Contractors</a>
               </li>
             
           
@@ -79,129 +85,66 @@
             <h1 class="page-title">JavaScript</h1>
           
 
-          <!--
-##Table of Contents
+          <p>The purpose of this style guide is to promote clean, efficient, and most importantly, readable code. Cuberis uses ES6 as a standard for writing JavaScript.</p>
+<h2>Variables</h2><h3>Naming</h3><p>Variables should be camel-cased and descriptively named.</p>
+<p>Cuberis uses build tools to minify, concatenate, and transpile JavaScript. The result is that all variable names will be replaced with single characters in production. This provides an advantage in that we can be very clear about function and variable names when writing JavaScript. For this reason single-letter variables, such as <code>i</code>, should be reserved for writing loops.</p>
+<h3>Declarations</h3><p>Variables should be declared with the <code>let</code> or <code>const</code> keywords rather than <code>var</code>. Declare all variables required for a given scope level at the same time. Removing unnecessary uses of the word <code>let</code> is better for performance.</p>
+<pre><code>// This is preferred
+let artworkTitle,
+    artworkYear,
+    artworkMedium;
 
-* General Principles
-* Syntax
-    * Indenting
-    * White space
-        * Line Breaks
-        * Parentheses
-    *
-* Variables
-    * Naming
-        * Booleans
-        * Single-letter variables
-    * Declarations
-* Functions
-* For Loops
-* jQuery
-
--->
-<h2>General Principles</h2><p>The goal of this style guide to promote clean, efficient, and perhaps most importantly, readable code. To achieve this goal, we seek to have consistently and logically formatted code.</p>
-<h2>Syntax</h2><h3>Indenting</h3><p>Our preferred indent style for JavaScript is one tab set to two space.</p>
-<h3>White space</h3><p>Our preferred use of white space</p>
-<h4>Line breaks</h4><p>Discrete functions should be seperated by two line breaks, but code inside functions should be seperated by only one line break. This is right:</p>
-<pre><code>function nameOfFunctionOne(){
-
-  var thisThing = &#39;a string thing&#39;;
-
-  ...
-  ...
-  ...
-
-}
-
-function nameOfFunctionTwo(){
-
-  ...
-  ...
-  ...
-
-}
-</code></pre><p>This is wrong:</p>
-<pre><code>function nameOfFunctionOne(){
-  var thisThing = &#39;a string thing&#39;;
-    ...
-
-    ...
-
-    ...
-    ...
-}
-function nameOfFunctionTwo(){
-  var thisThing = &#39;a string thing&#39;;
-    ...
-}
-</code></pre><h4>Parentheses</h4><p>Our preferred style of spacing for statements inside of parentheses is to have a space between the parentheses and the statement inside.</p>
-<p>This is correct:</p>
-<pre><code>function( param1, param2 ){
-  if( boolean ){
-    ...
-  }
-}
-</code></pre><p>This is wrong:</p>
-<pre><code>function(param1){
-    if(boolean){
-        ...
-    }
-}
-</code></pre><h3>Logical operators</h3><p>Our preferred style of handling logical statements with one boolean is to not include a</p>
-<pre><code>if( isCorrect ){
-    ...
-}
-
-if( !isCorrect ){
-    ...
-}
-</code></pre><p>This is wrong:</p>
-<pre><code>if( isCorrect == true ){
-    ...
-}
-
-if( isCorrect != true ){
-
-}
-</code></pre><h2>Variables</h2><h3>Naming</h3><p>Variables should be camel-cased and descriptively named.</p>
-<h3>Declarations</h3><p>When possible, variables should be instantiated with one use of the &quot;var&quot; keyword. Declare all variables required for a given scope level at once. Removing unnecessary uses of the word &quot;var&quot; is better for performance.</p>
-<p>This is fine:</p>
-<pre><code>var red,
-    orange,
-    green,
-    blue;
-</code></pre><p>This isnt:</p>
-<pre><code>var red;
-var orange;
-var green;
-var blue;
-</code></pre><h3>Booleans</h3><p>Booleans should be written as &quot;isCondition&quot; or &quot;hasProperty&quot; so that they can be immediately recognized as booleans. These are fine:</p>
-<pre><code>hasCorrectName = true;
+// Not preferred
+let title;
+let year;
+let medium;
+</code></pre><p>For data that should not be reassigned, use the <code>const</code> delcaration. Constants, unlike variables, should be formatted as uppercase.</p>
+<pre><code>let searchQuery = &#39;&#39;;
+const API_URL = &#39;/api/json/example&#39;;
+</code></pre><h3>Booleans</h3><p>Booleans should be written as <code>isCondition</code> or <code>hasProperty</code> so that they can be immediately recognized as booleans.</p>
+<pre><code>// This is preferred
+hasCorrectName = true;
 isCorrectlyNamed = true;
-</code></pre><p>but this isn&#39;t:</p>
-<pre><code>correctName = false;
-</code></pre><h3>Variable Nomeclature</h3><p>Cuberis uses a variety of tools to minify and concatenate JavaScript. The result is that all variable names will be replaced with single characters in production.</p>
-<p>This provides an advantage in that we can be very clear about function and variable names when writing JavaScript. For this reason single-letter variables should be reserved for writing loops.</p>
-<h2>Loops</h2><h3>For Loops</h3><p>A for loop should be written such that its conditional statement is a variable, not the property of a variable. This is done to increase processing speed. This variable should be declared in the for loops initialization, to cut down on use of the &quot;var&quot; keyword and thereby saving processing power. This is correct:</p>
-<pre><code>for( var i=0, x=array.length; i&lt;x; i++ ){
-  {...}
-}
-</code></pre><p>while these are not:</p>
-<pre><code>for( i=0; i&lt;array.length; i++ ){
-  {...}
+
+// Not preferred
+correctName = false;
+</code></pre><h3>Arrays &amp; Objects</h3><p>TBD...</p>
+<h2>Functions</h2><pre><code>// ES5
+function prefersReducedMotion() {
+  return window.matchMedia(&quot;(prefers-reduced-motion)&quot;).matches ? true : false;
 }
 
-var x = array.length;
-for( i=0; i&lt;x; i++ ){
-  {...}
+
+// ES6
+const prefersReducedMotion () =&gt; {
+    return window.matchMedia(&quot;(prefers-reduced-motion)&quot;).matches ? true : false;
 }
-</code></pre><h2>jQuery</h2><p>jQuery is a powerful library that makes performing DOM manipulation much easier. But like all powerful things, it must be checked.</p>
-<h3>Objects</h3><p>If a jQuery object is to be used multiple times, it should be declared as a variable, to cut down on both redundant objects and use of the $() function. Example:</p>
-<pre><code>var header = $( &#39;.header&#39; ),
-    headerHeight = header.height();
-</code></pre><p>Some people like to preface variables that are jQuery objects with a $ (e.g. $header) and this is fine but not required.</p>
-<h3>Selectors</h3><p>Selectors should be as concise as possible
-jQuery selectors should be as concise as possible. Each additional selector reduces the preformance of your JavaScript, and reduces rendering speed.</p>
+</code></pre><p>Single line arrow functions with an implicit return are also acceptable. However, they should be used sparingly, if at all. Sometimes the shorter and sweeter syntax is not worth the decreased readability.</p>
+<pre><code>const prefersReducedMotion () =&gt; window.matchMedia(&quot;(prefers-reduced-motion)&quot;).matches ? true : false;
+</code></pre><h3>Modules</h3><p>It is recommended to break out smaller, reusable functions into their own modules. This helps reduce the length and complexity of a main script file.</p>
+<pre><code>// &#39;./util/prefersReducedMotion.js&#39;
+
+/**
+ * Check user settings for reduced motion preferences, if available.
+ * @return {boolean}
+ */
+const prefersReducedMotion () =&gt; {
+    return window.matchMedia(&quot;(prefers-reduced-motion)&quot;).matches ? true : false;
+}
+
+export default prefersReducedMotion;
+</code></pre><pre><code>// main.js
+
+import prefersReducedMotion from &#39;./util/prefersReducedMotion.js&#39;
+
+if (!prefersReducedMotion) {
+    // Run this block of code.
+}
+</code></pre><h2>Libraries</h2><p>JavaScript libraries must be carefully considered before they are added to any project. While they help achieve a final product, there is always an import cost associated with each library.</p>
+<p>If possible, only import the parts you need rather than the entire library.</p>
+<pre><code>import { debounce, throttle } from &#39;lodash&#39;;
+</code></pre><h3>jQuery</h3><p>jQuery is a powerful library that makes performing DOM manipulation much easier. WordPress and many WordPress plugins with front-end output rely on jQuery as a dependency.</p>
+<h3>React</h3><p>React is a JavaScript library for building user interfaces. For complex and stateful interfaces, such as a collection or dynamic filtering, using React is preferred over jQuery.</p>
 
         </main>
       </div>
@@ -215,8 +158,8 @@ jQuery selectors should be as concise as possible. Each additional selector redu
         </div>
       </div>
     </footer>
-    <script src="/assets/js/nilla.js"></script>
-    <script src="/assets/js/app.js"></script>
+    <script src="/standards/assets/js/nilla.js"></script>
+    <script src="/standards/assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </body>
 </html>

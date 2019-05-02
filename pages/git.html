@@ -5,20 +5,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuberis Standards</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600,700|PT+Mono' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600|PT+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/standards/assets/css/app.css">
   </head>
   <body class="page-pages">
-    <header class="main-header">
-
-    </header>
+<!--
+ ______   __  __    _______   ______   ______     ________  ______
+/_____/\ /_/\/_/\ /_______/\ /_____/\ /_____/\   /_______/\/_____/\
+\:::__\/ \:\ \:\ \\::: _  \ \\::::_\/_\:::_ \ \  \__.::._\/\::::_\/_
+ \:\ \  __\:\ \:\ \\::(_)  \/_\:\/___/\\:(_) ) )_   \::\ \  \:\/___/\
+  \:\ \/_/\\:\ \:\ \\::  _  \ \\::___\/_\: __ `\ \  _\::\ \__\_::._\:\
+   \:\_\ \ \\:\_\:\ \\::(_)  \ \\:\____/\\ \ `\ \ \/__\::\__/\ /____\:\
+    \_____\/ \_____\/ \_______\/ \_____\/ \_\/ \_\/\________\/ \_____\/
+-->
+    <header class="main-header"></header>
     <div class="container-fluid">
       <div class="row-fluid">
         <aside class="col-sm-4 col left-col">
           <nav class="bar-nav">
-            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/assets/img/cuberis_logo.png" alt="Cuberis"></a>
-            <h3 class="site-title">Dev Standards</h3>
+            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/standards/assets/img/cuberis_logo.png" alt="Cuberis"></a>
+            <h3 class="site-title">Development Standards</h3>
             <ul>
               <li>
                 <a href="/standards/">Home</a>
@@ -26,43 +32,43 @@
           
             
               <li>
-                <a href="/pages/html">HTML/Markup (TBD)</a>
+                <a href="/standards/pages/html">HTML/Markup</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/css">CSS</a>
+                <a href="/standards/pages/css">CSS</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/php">PHP (TBD)</a>
+                <a href="/standards/pages/php">PHP</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/js">JavaScript</a>
+                <a href="/standards/pages/js">JavaScript</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/workflow">Workflow (TBD)</a>
+                <a href="/standards/pages/workflow">Workflow</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/wp">WordPress</a>
+                <a href="/standards/pages/wp">WordPress</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/contractors">Contractors</a>
+                <a href="/standards/pages/contractors">Contractors</a>
               </li>
             
           
@@ -73,17 +79,15 @@
           
 
           
-            <h1 class="page-title">Cuberis Development Standards</h1>
-          
 
-          <p>Cuberis use GIT for version control and GitHub for a number of development task. GitHub remote repositories, project development documentation, project issues and development specific discussion. The goal is to keep documentation and discussion in context and project a central location for all information related to development projects. Additionally, deployment of most projects is tied to the Master branch in GitHub in conjunction with DeployHQ.</p>
-<p>For a general introduction to GIT Cuberis has a Codeschool account with excellent video training. That login is available via LastPass.</p>
-<p>Basic online walk through and introduction to GIT and GitHub</p>
-<p><a href="https://try.github.io/levels/1/challenges/1">https://try.github.io/levels/1/challenges/1</a></p>
-<p>Cheat Sheet of Git Commands</p>
-<p><a href="https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf">https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf</a></p>
+          <h1 class="page-title">
+  Git &amp; GitHub
+</h1>
+
+<h2>Introduction</h2><p>Cuberis uses Git for version control and GitHub for a number of development tasks, i.e. project development documentation, project issues and development specific discussion. The goal is to keep all documentation and discussion in context and provide a central location for all information related to  projects.</p>
+<h2>Cheat Sheet of Git Commands</h2><p><a href="https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf">https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf</a></p>
 <p>The following provides a High Level over of the most common operations and Cuberis standard practices. Additionally, you can use once of server GUI applications including GitHub for Mac/Windows or SourceTree</p>
-<h3>Introduction to Basic Methods</h3><p>The most common methods required for GIT are:</p>
+<h2>Introduction to Basic Methods</h2><p>The most common methods required for Git are:</p>
 <ul>
 <li><code>git init</code></li>
 <li><code>git status</code></li>
@@ -93,47 +97,40 @@
 <li><code>git commit -a</code></li>
 <li><code>git push / git push -u origin &lt;branch name&gt;</code></li>
 </ul>
-<h4>git init</h4><p>Initializes a GIT repository so that you can begin tracking files.</p>
+<h3>git init</h3><p>Initializes a Git repository so that you can begin tracking files.</p>
 <p>Example Response:</p>
-<pre>
-Initialized empty Git repository in /Users/name/Cuberis/example-project/.git/
-</pre>
-
-<h4>git status</h4><p>Provides current status, providing details of current branch, Files untracked, changed and deleted.</p>
-<pre>
-On branch master
+<pre><code class="language-shell">Initialized empty Git repository in /Users/name/Cuberis/example-project/.git/
+</code></pre>
+<h3>git status</h3><p>Provides current status, providing details of current branch, Files untracked, changed and deleted.</p>
+<pre><code class="language-shell">On branch master
 
 Initial commit
 
 Untracked files:
-  (use "git add <file>..." to include in what will be committed)
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
 
     index.html
 
-nothing added to commit but untracked files present (use "git add" to track)
-</file></pre>
-
-<h4>git branch &lt;branch name&gt;</h4><p>This command is used to create a new branch off of your current branch</p>
-<h4>git checkout &lt;branch name&gt;</h4><p>Swaps your current branch</p>
-<h4>git add -A / git add path/to/file</h4><p>Add files to be tracked in a GIT project. Tracked files will be pushed to GitHub and have a history from the time that they are added forward.</p>
-<h4>git commit -a</h4><p>A commit represents a point in the files history that can be referenced. Commits should be main frequently in order to provide adequate references to changes and progress. Commits should take place whenever new functionality is working, or if a developer is breaking from the work for any reason. Commits that take place mid work should be marked as such.</p>
-<h4>git push / git push -u origin &lt;branch name&gt;</h4><p>A push stores your local code on GitHub where it can be accessed by the rest of the team. To push your current branch, if it is already available on GitHub, is simpley <code>git push</code>. In order to add your local branch to GitHub a <code>git push -u origin &lt;branch name&gt;</code> is required</p>
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</code></pre>
+<h3>git branch &lt;branch name&gt;</h3><p>This command is used to create a new branch off of your current branch</p>
+<h3>git checkout &lt;branch name&gt;</h3><p>Swaps your current branch</p>
+<h3>git add -A / git add path/to/file</h3><p>Add files to be tracked in a Git project. Tracked files will be pushed to GitHub and have a history from the time that they are added forward.</p>
+<h3>git commit -a</h3><p>A commit represents a point in the files history that can be referenced. Commits should be main frequently in order to provide adequate references to changes and progress. Commits should take place whenever new functionality is working, or if a developer is breaking from the work for any reason. Commits that take place mid work should be marked as such.</p>
+<h3>git push / git push -u origin &lt;branch name&gt;</h3><p>A push stores your local code on GitHub where it can be accessed by the rest of the team. To push your current branch, if it is already available on GitHub, is simpley <code>git push</code>. In order to add your local branch to GitHub a <code>git push -u origin &lt;branch name&gt;</code> is required</p>
 <p>Example Response:</p>
-<pre>
-Counting objects: 3, done.
+<pre><code class="language-shell">Counting objects: 3, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 255 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/cuberis/example.git
- * [new branch]      master -> master
+ * [new branch]      master -&gt; master
 Branch master set up to track remote branch master from origin.
-</pre>
-
-
-<h3>.gitignore Files</h3><p>Using an appropriate .gitignore file is critical.</p>
+</code></pre>
+<h2>.gitignore Files</h2><p>Using an appropriate .gitignore file is critical.</p>
 <p>Cuberis&#39; default .gitignore files are include in project baselines but may also be found on the  <a href="https://gist.github.com/cuberis">Cuberis Gists Page</a>.</p>
-<h3>Branches</h3><p>Cuberis has a specific branching structure for developing, staging and shipping code.</p>
+<h2>Branches</h2><p>Cuberis has a specific branching structure for developing, staging and shipping code.</p>
 <p>The primary primary branch for Development is the &#39;dev&#39; branch. This branch should only ever have working code and should be the primary branch that work is merged into.</p>
 <p>The &#39;dev&#39; branch as sub branches labeled to indicate purpose.</p>
 <ul>
@@ -142,7 +139,7 @@ Branch master set up to track remote branch master from origin.
 <li><strong>feature/feature-name</strong> : These branches are used in primary production as well as for ongoing development of new features. There may be more than one of these branches to a feature as one may include backend or functional code while the other contains frontend.</li>
 <li><strong>styles/general</strong> : This branch and associated branches are for the creation and implementation of general purpose CSS/JS that are not directly associate with specific components.</li>
 </ul>
-<h3>Committing</h3><p>When working with GIT it is important to commit regularly and to include concise and descriptive commit messages. The goal of commit messages is to provide information about what the commit involved.</p>
+<h2>Committing</h2><p>When working with Git it is important to commit regularly and to include concise and descriptive commit messages. The goal of commit messages is to provide information about what the commit involved.</p>
 <p><a href="https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message">https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message</a></p>
 <ol>
 <li>First line should include less than 50 characters and act as a title.</li>
@@ -157,13 +154,13 @@ Branch master set up to track remote branch master from origin.
 </li>
 </ol>
 <p>Example:</p>
-<pre><code>Clear Errors on Modal Close
+<pre><code class="language-shell">clear errors on modal close
 
-Clear JS errors when User closes login or Registraition modals.
-Change in behavior requested by client.
-Listen to .close class and empty() .js-errors &amp; removeClass(&#39;error&#39;) from .required
+- clear JS errors when user closes login or registration modals.
+- change in behavior requested by client.
+- listen to .close class and empty() .js-errors and removeClass(&#39;error&#39;) from .required
 
-Original Issue: https://github.com/cuberis/greenspon/issues/209
+original issue: https://github.com/cuberis/greenspon/issues/209
 
 # Please enter the commit message for your changes. Lines starting
 # with &#39;#&#39; will be ignored, and an empty message aborts the commit.
@@ -188,8 +185,8 @@ Original Issue: https://github.com/cuberis/greenspon/issues/209
         </div>
       </div>
     </footer>
-    <script src="/assets/js/nilla.js"></script>
-    <script src="/assets/js/app.js"></script>
+    <script src="/standards/assets/js/nilla.js"></script>
+    <script src="/standards/assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </body>
 </html>

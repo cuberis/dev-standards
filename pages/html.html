@@ -5,20 +5,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuberis Standards</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600,700|PT+Mono' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600|PT+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/standards/assets/css/app.css">
   </head>
   <body class="page-pages">
-    <header class="main-header">
-
-    </header>
+<!--
+ ______   __  __    _______   ______   ______     ________  ______
+/_____/\ /_/\/_/\ /_______/\ /_____/\ /_____/\   /_______/\/_____/\
+\:::__\/ \:\ \:\ \\::: _  \ \\::::_\/_\:::_ \ \  \__.::._\/\::::_\/_
+ \:\ \  __\:\ \:\ \\::(_)  \/_\:\/___/\\:(_) ) )_   \::\ \  \:\/___/\
+  \:\ \/_/\\:\ \:\ \\::  _  \ \\::___\/_\: __ `\ \  _\::\ \__\_::._\:\
+   \:\_\ \ \\:\_\:\ \\::(_)  \ \\:\____/\\ \ `\ \ \/__\::\__/\ /____\:\
+    \_____\/ \_____\/ \_______\/ \_____\/ \_\/ \_\/\________\/ \_____\/
+-->
+    <header class="main-header"></header>
     <div class="container-fluid">
       <div class="row-fluid">
         <aside class="col-sm-4 col left-col">
           <nav class="bar-nav">
-            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/assets/img/cuberis_logo.png" alt="Cuberis"></a>
-            <h3 class="site-title">Dev Standards</h3>
+            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/standards/assets/img/cuberis_logo.png" alt="Cuberis"></a>
+            <h3 class="site-title">Development Standards</h3>
             <ul>
               <li>
                 <a href="/standards/">Home</a>
@@ -26,43 +32,43 @@
           
             
               <li class="active">
-                <a href="/pages/html">HTML/Markup (TBD)</a>
+                <a href="/standards/pages/html">HTML/Markup</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/css">CSS</a>
+                <a href="/standards/pages/css">CSS</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/php">PHP (TBD)</a>
+                <a href="/standards/pages/php">PHP</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/js">JavaScript</a>
+                <a href="/standards/pages/js">JavaScript</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/workflow">Workflow (TBD)</a>
+                <a href="/standards/pages/workflow">Workflow</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/wp">WordPress</a>
+                <a href="/standards/pages/wp">WordPress</a>
               </li>
             
           
             
               <li>
-                <a href="/pages/contractors">Contractors</a>
+                <a href="/standards/pages/contractors">Contractors</a>
               </li>
             
           
@@ -76,13 +82,51 @@
           
 
           
-            <h1 class="page-title">HTML/Markup (TBD)</h1>
+            <h1 class="page-title">HTML/Markup</h1>
           
 
-          <h2>Philosophy</h2><p>...</p>
-<h2>Semantics</h2><p>...</p>
+          <h2>Introduction</h2><p>Let&#39;s face it, the web is built with HTML and we write a ton of it 👨‍💻. So let&#39;s aim write it well! Besides, who wants to wade through a sea of <code>&lt;div&gt;</code>s all day!</p>
+<h2>Semantics</h2><p>When writing HTML markup, semantics are very, very important. Semantics actually give meaning to your markup which helps with readability, maintainability, accessibility and other benefits. Elements should be used for their intended semantic purpose, i.e. a <code>&lt;nav&gt;</code> element for a menu instead of a <code>&lt;div&gt;</code>, a <code>&lt;button&gt;</code> for a button, or an <code>&lt;article&gt;</code> tag for a blog post. An example of good semantics:</p>
+<pre><code>&lt;article class=&quot;post&quot;&gt;
+  &lt;header class=&quot;post-header&quot;&gt;
+    &lt;h2 class=&quot;post-title&quot;&gt;The Title&lt;/h2&gt;
+    &lt;time class=&quot;post-date&quot;&gt;April, 26, 2019&lt;/time&gt;
+  &lt;/header&gt;
+  &lt;p&gt;The content&lt;/p&gt;
+&lt;/article&gt;
+</code></pre><p>An example not using semantics:</p>
+<pre><code>&lt;div class=&quot;post&quot;&gt;
+  &lt;div class=&quot;post-header&quot;&gt;
+    &lt;h2 class=&quot;post-title&quot;&gt;The Title&lt;/h2&gt;
+    &lt;div class=&quot;post-date&quot;&gt;April, 26, 2019&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;The content&lt;/p&gt;
+&lt;/div&gt;
+</code></pre><h3>Source Order (Mobile first 🙌)</h3><p>As a general rule, the mobile layout should determine the order of our HTML markup. Then for larger screens, elements get positioned accordingly via floats, flex-order, position, etc. This allows content to flow naturally for mobile and also improves accessibility for screen readers and ensures content is read in a logical fashion.</p>
+<h2>Accessibility (A11y)</h2><p>Simply put, accessibility is the practice of making your websites usable by as many people as possible. This largely includes those with disabilities, but also the average user who simply likes using his keyboard to tab through a form. We believe every project should be built with accessibility in mind. Regardless of if there are any strict project specific requirements, a11y enhancements should be considered to help all users, not just those who are impaired.</p>
+<h3>Assistive Technologies</h3><p>As a general rule of thumb, users should be able to navigate and use a website using only their keyboard or a screen reader without much difficulty.</p>
+<h3>Images</h3><p>All images should have an <code>alt</code> attribute. Decorative images or icons are hidden from assistive technologies using either <code>aria-hidden=&quot;true&quot;</code> or <code>alt=&quot;&quot;</code>.</p>
+<h3>Headings</h3><p>Pages should use a logical heading structure and should always start with <code>&lt;h1&gt;</code> which is typically reserved for the title. Similarly, an <code>&lt;h3&gt;</code> heading should never follow an <code>&lt;h1&gt;</code>, you would need an <code>&lt;h2&gt;</code>. Styling should never be tied directly to the heading tags as there should never be a temptation to use a heading based on how it looks, instead by semantics.</p>
+<h3>Other Resources</h3><ul>
+<li><a href="https://a11yproject.com/">A11y Project</a></li>
+<li><a href="https://github.com/brunopulis/awesome-a11y">Awesome A11y</a></li>
+<li><a href="https://contrast-ratio.com/">Color Contrast Calculator</a></li>
+<li><a href="https://squizlabs.github.io/HTML_CodeSniffer/">HTML CodeSniffer</a></li>
+<li><a href="https://webaim.org/articles/voiceover/">Testing using a Screen Reader</a></li>
+</ul>
 <h2>IDs and Classes</h2><p>In most cases, classes should be used for styling and IDs should be used for targeting with JavaScript. In the case where you need to target multiple elements on a page with your JS, prefixing the class name with <code>js-</code> is recommended.</p>
-<h2>Accessibility (A11y)</h2><p>...</p>
+<h2>Images &amp; Icons</h2><p>All images should be optimized for web and sized appropriately. For logos and illustrations, we prefer SVG as it is always crisp and clean and if inline, can be easily animated with CSS.</p>
+<h3>Responsive Images &amp; Backgrounds</h3><p>Wherever possible, images (including background images) should be responsive to the screen size they are displayed on. This means that smaller screens should never load the same image size as desktop screens. Whether this is using <code>srcset</code> attributes or <code>&lt;picture&gt;</code> elements, we leave up to the discretion of the developer.</p>
+<h2>Other Recommendations</h2><h3>Elements with many attributes</h3><p>For elements that have more than ~3-4 attributes, write each on their own line. Example:</p>
+<pre><code>&lt;div
+  aria-live=&quot;polite&quot;
+  class=&quot;posts-wrapper&quot;
+  data-bg=&quot;my-image.jpg&quot;
+  data-category=&quot;my-category&quot;
+  data-per-page=&quot;10&quot;
+  id=&quot;postsWrapper&quot;
+&gt;
+</code></pre>
 
         </main>
       </div>
@@ -96,8 +140,8 @@
         </div>
       </div>
     </footer>
-    <script src="/assets/js/nilla.js"></script>
-    <script src="/assets/js/app.js"></script>
+    <script src="/standards/assets/js/nilla.js"></script>
+    <script src="/standards/assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </body>
 </html>
