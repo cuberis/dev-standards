@@ -4,7 +4,7 @@ For all projects, developers should work locally before ever pushing code to a c
 
 ## GitHub
 
-All projects are managed using Git for version control along with GitHub for hosting the repositories. Projects under active development as well as proactive support should all have their own repos. Developers should be familiar with our standards for best practices when committing to one of our project repositories. For more information, [visit this page](/standards/git).
+All projects are managed using Git for version control along with GitHub for hosting the repositories. Projects under active development as well as proactive support should all have their own repos. Developers should be familiar with our standards for best practices when committing to one of our project repositories. For more information, [visit this page](/git).
 
 ## Security
 
@@ -18,7 +18,7 @@ We take security of our team members as well as our clients very seriously. In t
 
 ## Deployments
 
-_For contractors, see the [Contractors page](/standards/contractors)._
+_For contractors, see the [Contractors page](/contractors)._
 
 ### Deploying Code
 

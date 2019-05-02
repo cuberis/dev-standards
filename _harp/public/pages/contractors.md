@@ -18,7 +18,7 @@ For contractors, please report your time on projects separately from your time o
 These steps are listed in order:
 
 ### 1. Work Locally
-In all cases, local development is preferred. Work should never be done directly to a LIVE or Staging site, but coded and tested on a version of the site that lives on your local machine. See [Project Setup](/standards/pages/setup) for more information on getting setup.
+In all cases, local development is preferred. Work should never be done directly to a LIVE or Staging site, but coded and tested on a version of the site that lives on your local machine. See [Project Setup](/pages/setup) for more information on getting setup.
 
 ### 2. Setting up a Staging Environment
 In almost all cases, a staging site will be utilized to preview and QA code. A Cuberis team member will create the staging environment, however, it is up to the contractor to upload files and import databases as needed to the staging site.
@@ -39,7 +39,7 @@ git checkout -b [your-branch-name-here]
 git push -u origin [your-branch-name-here]
 ```
 
-Then on Github.com, visit the repo, and create a new Pull Request and notify a Cuberis team member. See [Git and GitHub](/standards/pages/git) for more information.
+Then on Github.com, visit the repo, and create a new Pull Request and notify a Cuberis team member. See [Git and GitHub](/pages/git) for more information.
 
 ### 4. Deploying to Staging
 Once a Pull Request has been successfully approved and merged, you may deploy the code to the staging site using your FTP/SFTP method of choice.

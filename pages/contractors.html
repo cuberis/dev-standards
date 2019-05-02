@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuberis Standards</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600|PT+Mono" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/standards/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
   </head>
   <body class="page-pages">
 <!--
@@ -23,52 +23,52 @@
       <div class="row-fluid">
         <aside class="col-sm-4 col left-col">
           <nav class="bar-nav">
-            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/standards/assets/img/cuberis_logo.png" alt="Cuberis"></a>
+            <a class="logo" href="https://cuberis.com" title="Cuberis"><img src="/assets/img/cuberis_logo.png" alt="Cuberis"></a>
             <h3 class="site-title">Development Standards</h3>
             <ul>
               <li>
-                <a href="/standards/">Home</a>
+                <a href="/">Home</a>
               </li>
           
             
               <li>
-                <a href="/standards/pages/html">HTML/Markup</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/standards/pages/css">CSS</a>
+                <a href="/pages/html">HTML/Markup</a>
               </li>
             
           
             
               <li>
-                <a href="/standards/pages/php">PHP</a>
+                <a href="/pages/css">CSS</a>
               </li>
             
           
             
               <li>
-                <a href="/standards/pages/js">JavaScript</a>
+                <a href="/pages/php">PHP</a>
               </li>
             
           
             
               <li>
-                <a href="/standards/pages/workflow">Workflow</a>
+                <a href="/pages/js">JavaScript</a>
               </li>
             
           
             
               <li>
-                <a href="/standards/pages/wp">WordPress</a>
+                <a href="/pages/workflow">Workflow</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/pages/wp">WordPress</a>
               </li>
             
           
             
               <li class="active">
-                <a href="/standards/pages/contractors">Contractors</a>
+                <a href="/pages/contractors">Contractors</a>
               </li>
             
           
@@ -92,7 +92,7 @@
 <p>For employees, our Harvest time keeping system includes projects under each client&#39;s name. All project work should be logged to that account using the proper sub category. For all maintenance tasks we have set up a “Maintenance” client which has a list of every active client preceded with “MNT:”. All maintenance work needs to be logged to these accounts. For employees, your Harvest entries should always be rounded up to the nearest 15 minute increment. Use the Teamwork task name including the ID# in your descriptions.</p>
 <p>For contractors, please report your time on projects separately from your time on maintenance tasks. You may report this time in any fashion you prefer, so long as each item is labeled as “project” or “maintenance.”</p>
 <h2>Workflow</h2><p>These steps are listed in order:</p>
-<h3>1. Work Locally</h3><p>In all cases, local development is preferred. Work should never be done directly to a LIVE or Staging site, but coded and tested on a version of the site that lives on your local machine. See <a href="/standards/pages/setup">Project Setup</a> for more information on getting setup.</p>
+<h3>1. Work Locally</h3><p>In all cases, local development is preferred. Work should never be done directly to a LIVE or Staging site, but coded and tested on a version of the site that lives on your local machine. See <a href="/pages/setup">Project Setup</a> for more information on getting setup.</p>
 <h3>2. Setting up a Staging Environment</h3><p>In almost all cases, a staging site will be utilized to preview and QA code. A Cuberis team member will create the staging environment, however, it is up to the contractor to upload files and import databases as needed to the staging site.</p>
 <h3>3. Pushing to GitHub</h3><p>A Cuberis team member will provide a repository for the project. This repository should be the single source of truth for a website&#39;s code base. Contractors should always work in their own separate branch, never in the DEV or MASTER branch. When work is ready to be pushed to staging, the branch can be pushed up and a Pull Request created. Pull Requests will be evaluated by a Cuberis Team member and merged into the appropriate branch when code is approved. A typical git workflow would be as follows:</p>
 <pre><code>cd into your local git repo
@@ -105,7 +105,7 @@ git checkout -b [your-branch-name-here]
 ... work is complete and ready to push ...
 
 git push -u origin [your-branch-name-here]
-</code></pre><p>Then on Github.com, visit the repo, and create a new Pull Request and notify a Cuberis team member. See <a href="/standards/pages/git">Git and GitHub</a> for more information.</p>
+</code></pre><p>Then on Github.com, visit the repo, and create a new Pull Request and notify a Cuberis team member. See <a href="/pages/git">Git and GitHub</a> for more information.</p>
 <h3>4. Deploying to Staging</h3><p>Once a Pull Request has been successfully approved and merged, you may deploy the code to the staging site using your FTP/SFTP method of choice.</p>
 <h3>5. Deploying to LIVE site</h3><p>Under no circumstances should code be pushed to a LIVE production site. Please contact a Cuberis team member for more information.</p>
 
@@ -121,8 +121,8 @@ git push -u origin [your-branch-name-here]
         </div>
       </div>
     </footer>
-    <script src="/standards/assets/js/nilla.js"></script>
-    <script src="/standards/assets/js/app.js"></script>
+    <script src="/assets/js/nilla.js"></script>
+    <script src="/assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </body>
 </html>

@@ -12,7 +12,7 @@ Although, we build complex things, we aim to keep our code as simple and easy to
 
 > All code in any code-base should look like a single person typed it, no matter how many people contributed. – [Principles of Writing Consistent, Idiomatic JavaScript](https://github.com/rwaldron/idiomatic.js/)
 
-Also, we build websites for all people which means we want our websites to be as inclusive as possible. This means a strong emphasis on [HTML semantics](/standards/html#semantics) as well as [accessibility](/standards/html#accessibility). Be kind to your users 💖!
+Also, we build websites for all people which means we want our websites to be as inclusive as possible. This means a strong emphasis on [HTML semantics](/html#semantics) as well as [accessibility](/html#accessibility). Be kind to your users 💖!
 
 ## Tabs or Spaces?
 
