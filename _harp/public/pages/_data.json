@@ -1,6 +1,6 @@
 [
   {
-    "title": "HTML/Markup (TBD)",
+    "title": "HTML/Markup",
     "slug": "html",
     "subnav": []
   },
@@ -10,7 +10,7 @@
     "subnav": []
   },
   {
-    "title": "PHP (TBD)",
+    "title": "PHP",
     "slug": "php",
     "subnav": []
   },
@@ -20,7 +20,7 @@
     "subnav": []
   },
   {
-    "title": "Workflow (TBD)",
+    "title": "Workflow",
     "slug": "workflow",
     "subnav": []
   },
