@@ -8,7 +8,7 @@ This project is built using the [Harp.js](http://harpjs.com/) static site genera
 
 ### Getting Started
 
-Start a local harp server from the `_harp` folder for LESS compiling and a `http://localhost` dev url.
+Start a local harp server from the `_harp` folder for LESS compiling and a `http://localhost` dev url. All source files are located in the `_harp` folder as well so make all changes/additions here.
 
 ```shell
 $ cd _harp
