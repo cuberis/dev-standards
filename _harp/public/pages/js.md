@@ -1,198 +1,106 @@
-<!--
-##Table of Contents
-
-* General Principles
-* Syntax
-    * Indenting
-    * White space
-        * Line Breaks
-        * Parentheses
-    *
-* Variables
-    * Naming
-        * Booleans
-        * Single-letter variables
-    * Declarations
-* Functions
-* For Loops
-* jQuery
-
--->
-
-## General Principles
-
-The goal of this style guide to promote clean, efficient, and perhaps most importantly, readable code. To achieve this goal, we seek to have consistently and logically formatted code.
-
-## Syntax
-
-### Indenting
-
-Our preferred indent style for JavaScript is one tab set to two space.
-
-### White space
-
-Our preferred use of white space
-
-
-#### Line breaks
-
-Discrete functions should be seperated by two line breaks, but code inside functions should be seperated by only one line break. This is right:
-
-    function nameOfFunctionOne(){
-
-      var thisThing = 'a string thing';
-
-      ...
-      ...
-      ...
-
-    }
-
-    function nameOfFunctionTwo(){
-
-      ...
-      ...
-      ...
-
-    }
-
-This is wrong:
-
-    function nameOfFunctionOne(){
-      var thisThing = 'a string thing';
-        ...
-
-        ...
-
-        ...
-        ...
-    }
-    function nameOfFunctionTwo(){
-      var thisThing = 'a string thing';
-        ...
-    }
-
-#### Parentheses
-
-Our preferred style of spacing for statements inside of parentheses is to have a space between the parentheses and the statement inside.
-
-This is correct:
-
-    function( param1, param2 ){
-      if( boolean ){
-        ...
-      }
-    }
-
-This is wrong:
-
-    function(param1){
-        if(boolean){
-            ...
-        }
-    }
-
-
-### Logical operators
-
-Our preferred style of handling logical statements with one boolean is to not include a
-
-    if( isCorrect ){
-        ...
-    }
-
-    if( !isCorrect ){
-        ...
-    }
-
-This is wrong:
-
-    if( isCorrect == true ){
-        ...
-    }
-
-    if( isCorrect != true ){
-
-    }
-
+The purpose of this style guide is to promote clean, efficient, and most importantly, readable code. Cuberis uses ES6 as a standard for writing JavaScript.
 
 ## Variables
 
 ### Naming
-
 Variables should be camel-cased and descriptively named.
 
+Cuberis uses build tools to minify, concatenate, and transpile JavaScript. The result is that all variable names will be replaced with single characters in production. This provides an advantage in that we can be very clear about function and variable names when writing JavaScript. For this reason single-letter variables, such as `i`, should be reserved for writing loops.
+
 ### Declarations
+Variables should be declared with the `let` or `const` keywords rather than `var`. Declare all variables required for a given scope level at the same time. Removing unnecessary uses of the word `let` is better for performance.
 
-When possible, variables should be instantiated with one use of the "var" keyword. Declare all variables required for a given scope level at once. Removing unnecessary uses of the word "var" is better for performance.
+```
+// This is preferred
+let artworkTitle,
+    artworkYear,
+    artworkMedium;
 
-This is fine:
+// Not preferred
+let title;
+let year;
+let medium;
+```
 
-    var red,
-        orange,
-        green,
-        blue;
+For data that should not be reassigned, use the `const` delcaration. Constants, unlike variables, should be formatted as uppercase.
 
-This isnt:
-
-    var red;
-    var orange;
-    var green;
-    var blue;
-
+```
+let searchQuery = '';
+const API_URL = '/api/json/example';
+```
 
 ### Booleans
+Booleans should be written as `isCondition` or `hasProperty` so that they can be immediately recognized as booleans.
 
-Booleans should be written as "isCondition" or "hasProperty" so that they can be immediately recognized as booleans. These are fine:
+```
+// This is preferred
+hasCorrectName = true;
+isCorrectlyNamed = true;
 
-    hasCorrectName = true;
-    isCorrectlyNamed = true;
+// Not preferred
+correctName = false;
+```
 
-but this isn't:
+### Arrays & Objects
+TBD...
 
-    correctName = false;
+## Functions
+```
+// ES5
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion)").matches ? true : false;
+}
 
-### Variable Nomeclature
 
-Cuberis uses a variety of tools to minify and concatenate JavaScript. The result is that all variable names will be replaced with single characters in production.
+// ES6
+const prefersReducedMotion () => {
+    return window.matchMedia("(prefers-reduced-motion)").matches ? true : false;
+}
+```
 
-This provides an advantage in that we can be very clear about function and variable names when writing JavaScript. For this reason single-letter variables should be reserved for writing loops.
+Single line arrow functions with an implicit return are also acceptable. However, they should be used sparingly, if at all. Sometimes the shorter and sweeter syntax is not worth the decreased readability.
+```
+const prefersReducedMotion () => window.matchMedia("(prefers-reduced-motion)").matches ? true : false;
+```
 
-## Loops
+### Modules
+It is recommended to break out smaller, reusable functions into their own modules. This helps reduce the length and complexity of a main script file.
 
-### For Loops
+```
+// './util/prefersReducedMotion.js'
 
-A for loop should be written such that its conditional statement is a variable, not the property of a variable. This is done to increase processing speed. This variable should be declared in the for loops initialization, to cut down on use of the "var" keyword and thereby saving processing power. This is correct:
+/**
+ * Check user settings for reduced motion preferences, if available.
+ * @return {boolean}
+ */
+const prefersReducedMotion () => {
+    return window.matchMedia("(prefers-reduced-motion)").matches ? true : false;
+}
 
-    for( var i=0, x=array.length; i<x; i++ ){
-      {...}
-    }
+export default prefersReducedMotion;
+```
 
-while these are not:
+```
+// main.js
 
-    for( i=0; i<array.length; i++ ){
-      {...}
-    }
+import prefersReducedMotion from './util/prefersReducedMotion.js'
 
-    var x = array.length;
-    for( i=0; i<x; i++ ){
-      {...}
-    }
+if (!prefersReducedMotion) {
+    // Run this block of code.
+}
+```
 
-## jQuery
+## Libraries
+JavaScript libraries must be carefully considered before they are added to any project. While they help achieve a final product, there is always an import cost associated with each library.
 
-jQuery is a powerful library that makes performing DOM manipulation much easier. But like all powerful things, it must be checked.
+If possible, only import the parts you need rather than the entire library.
 
-### Objects
+```
+import { debounce, throttle } from 'lodash';
+```
 
-If a jQuery object is to be used multiple times, it should be declared as a variable, to cut down on both redundant objects and use of the $() function. Example:
+### jQuery
+jQuery is a powerful library that makes performing DOM manipulation much easier. WordPress and many WordPress plugins with front-end output rely on jQuery as a dependency.
 
-    var header = $( '.header' ),
-        headerHeight = header.height();
-
-Some people like to preface variables that are jQuery objects with a $ (e.g. $header) and this is fine but not required.
-
-### Selectors
-
-Selectors should be as concise as possible
-jQuery selectors should be as concise as possible. Each additional selector reduces the preformance of your JavaScript, and reduces rendering speed.
+### React
+React is a JavaScript library for building user interfaces. For complex and stateful interfaces, such as a collection or dynamic filtering, using React is preferred over jQuery.
