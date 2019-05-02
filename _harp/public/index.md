@@ -4,7 +4,7 @@ Welcome to the Standards Documentation for the Cuberis Development Team 👋! Th
 
 ## Who is this for?
 
-The intended audience for this document is developers. If you aren't familiar with writing HTML, CSS, PHP and/or JavaScript, this is not going to be for you!
+The intended audience for this document is developers. If you aren't familiar with writing HTML, CSS, PHP and/or JavaScript, this may not be for you!
 
 ## Philosophy
 
@@ -12,7 +12,7 @@ Although, we build complex things, we aim to keep our code as simple and easy to
 
 > All code in any code-base should look like a single person typed it, no matter how many people contributed. – [Principles of Writing Consistent, Idiomatic JavaScript](https://github.com/rwaldron/idiomatic.js/)
 
-Also, we build websites for all people which means we want our websites to be as inclusive as possible. This means a strong emphasis on [HTML semantics](/html#semantics) as well as [accessibility](/html#accessibility). Be kind to your users 💖!
+Also, we build websites for all people which means we want our websites to be as inclusive as possible. This means a strong emphasis on [HTML semantics](/pages/html#semantics) as well as [accessibility](/pages/html#accessibility). Be kind to your users 💖!
 
 ## Tabs or Spaces?
 
