@@ -1,5 +1,5 @@
 <h1 class="page-title">
-  Git + GitHub
+  Git & GitHub
 </h1>
 
 ## Introduction

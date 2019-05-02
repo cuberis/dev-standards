@@ -4,7 +4,7 @@ Our preferred method of writing CSS is using [SASS](https://sass-lang.com/), a C
 
 ## Frameworks
 
-We use [Bootstrap](https://getbootstrap.com/) for our framework of choice. New projects all start out on version 4+, however, we have a number of older sites that are running [version 3](https://getbootstrap.com/docs/3.4/).
+We use [Bootstrap](https://getbootstrap.com/) for our framework of choice. New projects start out on version 4+, however, we have a number of older sites that run [version 3](https://getbootstrap.com/docs/3.4/).
 
 ### Utility Class Frameworks
 
@@ -18,6 +18,8 @@ For some projects, it makes sense to adopt a utility-class-first approach. In th
 2. Avoid long blocks of nested rules. If a block extends past the length of your editor's window for instance, you lose context of what the parent selector was since you can no longer see it.
 3. While we do not enforce a strict naming methodology (i.e. BEM, OOCSS, SMACSS, etc.), be specific with your class names so it is clear what they are for.
 4. Don't feel forced to name everything! In a lot of cases utility classes work just fine!
+
+### Rulesets
 
 The following terminology is used when referencing CSS rulesets:
 

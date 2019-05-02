@@ -143,17 +143,7 @@ if ( boolean ) {
 }
 
 
-// Use white space and line breaks where appropriate
-if (
-  condition_one()
-  && condition_two()
-  && ! empty($my_arr)
-) {
-  ...
-}
-
-
-// Use ternary operators over if/else or switch
+// Ternary operators are preferred over if/else or switch where possible
 $body_class = ! empty($array) ? 'my-class' : '';
 ```
 
